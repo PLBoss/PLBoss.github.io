@@ -57,7 +57,34 @@
         <div id="article">
     <div class="toc"></div>
     <div class="article-body">
-        <h2 id="爬虫介绍"><a href="#爬虫介绍" class="headerlink" title="爬虫介绍"></a>爬虫介绍</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><h2 id="编程环境安装"><a href="#编程环境安装" class="headerlink" title="编程环境安装"></a>编程环境安装</h2>
+        <h3 id="爬虫介绍"><a href="#爬虫介绍" class="headerlink" title="爬虫介绍"></a>爬虫介绍</h3><pre><code>*
+</code></pre>
+<h3 id="万物皆可API"><a href="#万物皆可API" class="headerlink" title="万物皆可API"></a>万物皆可API</h3><p>API:程序之间的接口</p>
+<p>###编程环境安装<br>    requests库的安装：<br>    以管理员权限打开管理员控制台（cmd)<br>    然后输入命令 pip install requests</p>
+<h4 id="测试requests库是否安装成功"><a href="#测试requests库是否安装成功" class="headerlink" title="测试requests库是否安装成功"></a>测试requests库是否安装成功</h4><pre><code>打开python的ide
+输入以下命令：
+    import requets
+     r = requests.get(&quot;http://www.baidu.com&quot;)
+    print(r.status_code)
+然后运行命令，显示200，则表示requests库安装成功
+</code></pre>
+<h4 id="requests库的主要方法"><a href="#requests库的主要方法" class="headerlink" title="requests库的主要方法"></a>requests库的主要方法</h4><pre><code>requests.get(url):含有浏览器返回的所有信息
+    r=requests.get(url)
+    r.status_code //返回状态，200表述连接成功，404表述连接失败
+    r.text //返回url对应的页面内容
+    r.encoding 返回响应内编码方式
+    r.apparent_encoding 从内容这分出析响应的编码方式
+    r.content 以二进制返回网页内容
+    r.raise_for_status() 异常处理，如果状态不是200则会引发异常
+requests.head()
+
+requests.post()
+requests.put()
+requests.patch()
+requests.delete()
+</code></pre>
+<h3 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h3><p>超文本传输协议<br>提取服务器信息：get head<br>更新服务器操作： post put(覆盖原有信息) patch（更新局部信息） delete</p>
+
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
             <div class="suffix-box-left">
