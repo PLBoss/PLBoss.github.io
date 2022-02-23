@@ -82,9 +82,23 @@ requests.post()
 requests.put()
 requests.patch()
 requests.delete()
+requests.request(method,url,**kwargs)
+method:get,post,put,patch,delete
+**kwarges:传输数据
 </code></pre>
-<h3 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h3><p>超文本传输协议<br>提取服务器信息：get head<br>更新服务器操作： post put(覆盖原有信息) patch（更新局部信息） delete</p>
-
+<h3 id="网页爬取通用框架"><a href="#网页爬取通用框架" class="headerlink" title="网页爬取通用框架"></a>网页爬取通用框架</h3><pre><code>import requests
+try:
+ r=requests.request(get,url,timeout=30)
+ r.raise_for_status()
+ r.encoding=r.apprent_encoding
+   return r.text
+except:
+    return &quot;error&quot;
+</code></pre>
+<h3 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h3><p>超文本传输协议<br>提取服务器信息：get head<br>更新服务器操作： post put(覆盖原有信息) patch（更新局部信息）<br>delete.<br>详见：<a target="_blank" rel="noopener" href="https://www.runoob.com/http/http-status-codes.html">https://www.runoob.com/http/http-status-codes.html</a></p>
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>是一种存储在用户本地终端的加密数据<br>作用：辨别用户身份</p>
+<h3 id="robots协议"><a href="#robots协议" class="headerlink" title="robots协议"></a>robots协议</h3><p>用于网络爬虫排除标准<br>告知所有的网络爬虫爬取资源的权限</p>
+<h3 id="模拟浏览器向服务器发送请求（规避浏览器来源审查）"><a href="#模拟浏览器向服务器发送请求（规避浏览器来源审查）" class="headerlink" title="模拟浏览器向服务器发送请求（规避浏览器来源审查）"></a>模拟浏览器向服务器发送请求（规避浏览器来源审查）</h3>
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
             <div class="suffix-box-left">
