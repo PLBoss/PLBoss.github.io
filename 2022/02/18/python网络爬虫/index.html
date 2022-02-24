@@ -120,7 +120,11 @@ f.cloce
 <pre><code>from bs4 import BeautifulSoup
 </code></pre>
 <p>对页面内容进行解析</p>
-<pre><code>soup=BeautifulSoup(demo,&#39;html.parser&#39;)
+<pre><code>demo=r.text
+soup=BeautifulSoup(demo,&#39;html.parser&#39;)
+</code></pre>
+<p>prettify的使用</p>
+<pre><code>soup.prettiy()//为html文本增加换行符，分行显示
 </code></pre>
 <p>其中html.parser为html页面的解析器，还可以为lxml,xml,html5lib</p>
 <p>获取html页面对应标签的内容</p>
@@ -140,7 +144,24 @@ tag.attrs[&#39;class&#39;]//查看标签a的类名
 tag.attrs[&#39;id&#39;]
 tag.attrs[&#39;herf&#39;]//查看标签中的链接
 </code></pre>
-
+<p>查看子节点</p>
+<pre><code>soup.body.contents//查看body中所有儿子节点，将所有的儿子节点存入列表中
+soup.body.children //循环遍历所有的儿子节点
+soup.descendants  //用于遍历所有子孙节点
+</code></pre>
+<p>查看父亲节点</p>
+<pre><code>soup.body.parent
+soup.body.parents//用于遍历所有先辈节点
+</code></pre>
+<p>查看平行标签</p>
+<p>查看平行标签的下一个标签</p>
+<pre><code>soup.a.next_sibling//查看a标签的下一个标签
+</code></pre>
+<p>查看平行标签的上一个标签</p>
+<pre><code>soup.a.previous_sibing//查看a标签的上一个标签
+</code></pre>
+<p><img src="https://gitee.com/Fox615/images/raw/master/20220224220339.png"></p>
+<h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2>
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
             <div class="suffix-box-left">
