@@ -161,7 +161,25 @@ soup.body.parents//用于遍历所有先辈节点
 <pre><code>soup.a.previous_sibing//查看a标签的上一个标签
 </code></pre>
 <p><img src="https://gitee.com/Fox615/images/raw/master/20220224220339.png"></p>
-<h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2>
+<h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><h2 id="信息标记的三种方式"><a href="#信息标记的三种方式" class="headerlink" title="信息标记的三种方式"></a>信息标记的三种方式</h2><h3 id="xml（与html相似）"><a href="#xml（与html相似）" class="headerlink" title="xml（与html相似）"></a>xml（与html相似）</h3><p>主要用来internet上的信息交互与传递</p>
+<h3 id="jason-键值对-含有双引号）"><a href="#jason-键值对-含有双引号）" class="headerlink" title="jason(键值对,含有双引号）"></a>jason(键值对,含有双引号）</h3><p>主要应用于云端和节点的信息通信<br><img src="https://gitee.com/Fox615/images/raw/master/20220228201941.png"><br>可以在键值对中嵌套键值对</p>
+<h3 id="Yaml-键值对形式，但无双引号）"><a href="#Yaml-键值对形式，但无双引号）" class="headerlink" title="Yaml(键值对形式，但无双引号）"></a>Yaml(键值对形式，但无双引号）</h3><p>各类系统的配置文件<br>利用缩进来表示所属关系<br><img src="https://gitee.com/Fox615/images/raw/master/20220228202037.png"><br>利用减号表述所属关系<br><img src="https://gitee.com/Fox615/images/raw/master/20220228202201.png"><br>用竖线表示整块数据<br><img src="https://gitee.com/Fox615/images/raw/master/20220228202330.png"></p>
+<h2 id="信息提取的一般方法"><a href="#信息提取的一般方法" class="headerlink" title="信息提取的一般方法"></a>信息提取的一般方法</h2><h3 id="形式解析与搜索方法"><a href="#形式解析与搜索方法" class="headerlink" title="形式解析与搜索方法"></a>形式解析与搜索方法</h3><h4 id="方法find-all的使用"><a href="#方法find-all的使用" class="headerlink" title="方法find_all的使用"></a>方法find_all的使用</h4><pre><code>soup.find_all(&#39;a&#39;)//查找所有的a标签,默认查找所有的子孙
+soup.find_all(&#39;a&#39;，recursive=false)//查找所有的a标签,查找子节点
+soup.find_all(&#39;a&#39;,&#39;b&#39;)//查找a和b标签
+
+for tag in soup.find_all(True):
+    print(tag.name)//查看html页面的所有内容
+
+for tag in soup.find_all(re.compile(&#39;b&#39;)):
+    print(tag.name)//查看html页面的所有以b开头的内容
+sou.find_all(&#39;a&#39;,&#39;student&#39;)//查找a标签中包含student属性的标签
+soup.find_all(id=&#39;link1&#39;) //查看标签中属性包含id=&#39;link1&#39;
+soup.find_all(string =re.compile (&quot;python&quot;))//检索所有包含字符串python的字符串
+</code></pre>
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="导入正则表达式库"><a href="#导入正则表达式库" class="headerlink" title="导入正则表达式库"></a>导入正则表达式库</h3><pre><code>import re
+</code></pre>
+
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
             <div class="suffix-box-left">
