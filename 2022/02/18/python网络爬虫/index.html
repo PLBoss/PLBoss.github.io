@@ -177,8 +177,30 @@ sou.find_all(&#39;a&#39;,&#39;student&#39;)//查找a标签中包含student属性
 soup.find_all(id=&#39;link1&#39;) //查看标签中属性包含id=&#39;link1&#39;
 soup.find_all(string =re.compile (&quot;python&quot;))//检索所有包含字符串python的字符串
 </code></pre>
-<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="导入正则表达式库"><a href="#导入正则表达式库" class="headerlink" title="导入正则表达式库"></a>导入正则表达式库</h3><pre><code>import re
+<h2 id="正则表达式（表示了一组字符串的特征或模式）"><a href="#正则表达式（表示了一组字符串的特征或模式）" class="headerlink" title="正则表达式（表示了一组字符串的特征或模式）"></a>正则表达式（表示了一组字符串的特征或模式）</h2><h3 id="导入正则表达式库"><a href="#导入正则表达式库" class="headerlink" title="导入正则表达式库"></a>导入正则表达式库</h3><pre><code>import re
 </code></pre>
+<h3 id="常用正则"><a href="#常用正则" class="headerlink" title="常用正则"></a>常用正则</h3><pre><code>py+//匹配以p开头且后面有一个或无穷多个y的字符串
+</code></pre>
+<p><img src="https://gitee.com/Fox615/images/raw/master/20220310195658.png"></p>
+<h3 id="常用操作符"><a href="#常用操作符" class="headerlink" title="常用操作符"></a>常用操作符</h3><p><img src="https://gitee.com/Fox615/images/raw/master/20220310195430.png"><br><img src="https://gitee.com/Fox615/images/raw/master/20220310195518.png"></p>
+<pre><code>re.sub(pattern,repl,string)//将string中符合pattern的字符串使用repl进行替换
+re.finiditer(pattern,string) //将匹配到的字符串整成一个可以循环的列表，使用for循环可以取出其中的元素
+re.compile(pattern) 将正则表达式的字符串形式编译成正则表达式对象
+martch.group(0) //获得匹配后的字符串
+martch.start() //获取匹配到的开始位置
+martch.end() //匹配的结束位置
+marth.spand() //匹配文本的开始与结束
+martch.string //待匹配的文本
+martch.re //获取匹配的正则表达式
+martch.pos //获取开始匹配的位置
+martch.endpos //获取结束匹配的位置
+</code></pre>
+<h4 id="面向对象re库用法"><a href="#面向对象re库用法" class="headerlink" title="面向对象re库用法"></a>面向对象re库用法</h4><p><img src="https://gitee.com/Fox615/images/raw/master/20220310201212.png"><br>经过一次编译，以后都可以直接使用，以此加快程序的运行    </p>
+<p>###re函数的主要功能</p>
+<p><img src="https://gitee.com/Fox615/images/raw/master/20220310195121.png"></p>
+<h3 id="re库的贪婪匹配和最小匹配"><a href="#re库的贪婪匹配和最小匹配" class="headerlink" title="re库的贪婪匹配和最小匹配"></a>re库的贪婪匹配和最小匹配</h3><p>re库默认的是贪婪匹配，返回匹配到的最长的字符串<br><img src="https://gitee.com/Fox615/images/raw/master/20220310203514.png"></p>
+<hr>
+<h2 id="lxml库"><a href="#lxml库" class="headerlink" title="lxml库"></a>lxml库</h2><p>官方文档 <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/lxml/">https://www.w3cschool.cn/lxml/</a></p>
 
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
