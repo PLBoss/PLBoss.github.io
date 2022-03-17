@@ -201,6 +201,49 @@ martch.endpos //获取结束匹配的位置
 <h3 id="re库的贪婪匹配和最小匹配"><a href="#re库的贪婪匹配和最小匹配" class="headerlink" title="re库的贪婪匹配和最小匹配"></a>re库的贪婪匹配和最小匹配</h3><p>re库默认的是贪婪匹配，返回匹配到的最长的字符串<br><img src="https://gitee.com/Fox615/images/raw/master/20220310203514.png"></p>
 <hr>
 <h2 id="lxml库"><a href="#lxml库" class="headerlink" title="lxml库"></a>lxml库</h2><p>官方文档 <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/lxml/">https://www.w3cschool.cn/lxml/</a></p>
+<h3 id="Scapy爬虫框架-5-2）"><a href="#Scapy爬虫框架-5-2）" class="headerlink" title="Scapy爬虫框架(5+2）"></a>Scapy爬虫框架(5+2）</h3><h4 id="Scrapy的安装"><a href="#Scrapy的安装" class="headerlink" title="Scrapy的安装"></a>Scrapy的安装</h4><pre><code>pip install Scrapy
+</code></pre>
+<h4 id="Scrapy的框架"><a href="#Scrapy的框架" class="headerlink" title="Scrapy的框架"></a>Scrapy的框架</h4><p><img src="https://gitee.com/Fox615/images/raw/master/20220316195813.png"></p>
+<p>Spider</p>
+<ul>
+<li>解析Downloader返回的响应(Response)</li>
+<li>产生爬取项(scraped item)</li>
+<li>产生额外的爬取请求（Requests)</li>
+</ul>
+<p>Engine </p>
+<ul>
+<li>控制所有模块之间的数据流</li>
+<li>根据条件触发事件</li>
+<li>不需要用户修改</li>
+</ul>
+<p>DownLoader</p>
+<ul>
+<li>根据请求下载网页</li>
+<li>不需要用户修改</li>
+</ul>
+<p>Scheduler </p>
+<ul>
+<li>不需要用户修改</li>
+<li>对所有请求进行调度管理</li>
+</ul>
+<h4 id="Scapy常用命令"><a href="#Scapy常用命令" class="headerlink" title="Scapy常用命令"></a>Scapy常用命令</h4><p>格式：scrapy command options args</p>
+<pre><code>scrapy startprojects name dir /创建一个工程
+scrapy genspider name domain //创建一个爬虫
+scrapy seting options //获取爬虫的配置信息
+scrapy crawl spider //运行一个爬虫
+scrapy list // 列出工程中所有的爬虫
+scrapy shell url //启动URL调试命令行
+</code></pre>
+<h4 id="Scrapy基础"><a href="#Scrapy基础" class="headerlink" title="Scrapy基础"></a>Scrapy基础</h4><p>#####第一步：创建scrapy项目</p>
+<p>在自己创建存储项目的文件夹内，按住shift然后右键，选择打开powershell 命令台，前面的两个单词是创建项目固定的，最后一个单词是项目名称</p>
+<p><img src="https://gitee.com/Fox615/images/raw/master/20220317211436.png"><br><img src="https://gitee.com/Fox615/images/raw/master/20220317212010.png"></p>
+<pre><code>scrapy startproject python123demo
+</code></pre>
+<p>#####第二步：产生demo.py<br>继续在命令台上输入 scrapy genspider python123.io ,前两个单词固定，后面是爬取页面的原始地址，这个可以在创建demo后，修改爬取网页的地址<br><img src="https://gitee.com/Fox615/images/raw/master/20220317212221.png"><br><img src="https://gitee.com/Fox615/images/raw/master/20220317212043.png"></p>
+<p>#####第三步：修改demo</p>
+<p><img src="https://gitee.com/Fox615/images/raw/master/20220317213550.png"></p>
+<p>#####第四步：运行爬虫<br>继续在命令台输入 scrapy crawl demo<br><img src="https://gitee.com/Fox615/images/raw/master/20220317212523.png"></p>
+<p>#####结果：<br><img src="https://gitee.com/Fox615/images/raw/master/20220317213244.png"></p>
 
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
