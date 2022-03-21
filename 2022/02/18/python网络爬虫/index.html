@@ -244,6 +244,66 @@ scrapy shell url //启动URL调试命令行
 <p><img src="https://gitee.com/Fox615/images/raw/master/20220317213550.png"></p>
 <p>#####第四步：运行爬虫<br>继续在命令台输入 scrapy crawl demo<br><img src="https://gitee.com/Fox615/images/raw/master/20220317212523.png"></p>
 <p>#####结果：<br><img src="https://gitee.com/Fox615/images/raw/master/20220317213244.png"></p>
+<h4 id="yield生成器"><a href="#yield生成器" class="headerlink" title="yield生成器"></a>yield生成器</h4><ul>
+<li><p>生成器是一个不断产生值的函数</p>
+</li>
+<li><p>包含yild语句的函数是一个生成器</p>
+</li>
+<li><p>生成器每次产生一个值（yield语句），函数被冻结，被唤醒后在产生一个值，唤醒后还是从上一个执行的位置开始执行</p>
+</li>
+<li><p>经常与循环搭配使用</p>
+<h4 id="使用实列"><a href="#使用实列" class="headerlink" title="使用实列"></a>使用实列</h4><p>  def gen(n):</p>
+<pre><code>  for i in range(n):
+      yield i**2
+</code></pre>
+<p>  for i in gen(5):</p>
+<pre><code>      print(i,&quot;&quot;,end=&quot;&quot;)
+</code></pre>
+<p>  结果： 0 1 4 9 16</p>
+</li>
+</ul>
+<p>#####生成器的优点（相比与普通的列表返回方法）</p>
+<ul>
+<li>更快的响应速度</li>
+<li>更节省存储空间（每次只需要一个存储空间）</li>
+<li>使用更加灵活</li>
+</ul>
+<h4 id="爬虫的生成器写法"><a href="#爬虫的生成器写法" class="headerlink" title="爬虫的生成器写法"></a>爬虫的生成器写法</h4><pre><code>for url in start_urls:
+        yield scrapy.Request(url=url,callback=self.parse)
+</code></pre>
+<h4 id="scrapy爬虫的使用步骤"><a href="#scrapy爬虫的使用步骤" class="headerlink" title="scrapy爬虫的使用步骤"></a>scrapy爬虫的使用步骤</h4><p>步骤一：创建一个工程和spider模板<br>步奏二:编写spider<br>步骤三： 编写item pipecline<br>步骤四： 优化配置策略</p>
+<h5 id="Scrapy爬虫的数据类型"><a href="#Scrapy爬虫的数据类型" class="headerlink" title="Scrapy爬虫的数据类型"></a>Scrapy爬虫的数据类型</h5><p>Ruests类 </p>
+<pre><code>class scrapy.http.Request()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>.url</th>
+<th>.method</th>
+<th>.headers</th>
+<th>.body</th>
+<th>.meta</th>
+<th>.copy</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>requests对应请求的位置</td>
+<td>对应的请求方法</td>
+<td>字典类型的请求头</td>
+<td>内容的主体</td>
+<td>用户添加的拓展信息</td>
+<td>复制该请求</td>
+</tr>
+</tbody></table>
+<p>Response类  </p>
+<pre><code>class scrapy.http.Response()
+</code></pre>
+<p><img src="https://gitee.com/Fox615/images/raw/master/20220321212306.png"></p>
+<p>Item类 </p>
+<pre><code> class scrapy.http.Response()
+</code></pre>
+<h5 id="Css-selector"><a href="#Css-selector" class="headerlink" title="Css-selector"></a>Css-selector</h5><pre><code>&lt;HTML&gt;.CSS(&#39;a::attr(herf)&#39;).extract()
+</code></pre>
 
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
