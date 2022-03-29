@@ -66,28 +66,28 @@
 </code></pre>
 <h3 id="打印爬取页面的内容"><a href="#打印爬取页面的内容" class="headerlink" title="打印爬取页面的内容"></a>打印爬取页面的内容</h3><pre><code>print(r.text)
 </code></pre>
-<h3 id="使用浏览器插件xpath-helper获取提取信息位置"><a href="#使用浏览器插件xpath-helper获取提取信息位置" class="headerlink" title="使用浏览器插件xpath helper获取提取信息位置"></a>使用浏览器插件xpath helper获取提取信息位置</h3><p><img src="https://gitee.com/Fox615/images/raw/master/20220302172400.png"></p>
+<h3 id="使用浏览器插件xpath-helper获取提取信息位置"><a href="#使用浏览器插件xpath-helper获取提取信息位置" class="headerlink" title="使用浏览器插件xpath helper获取提取信息位置"></a>使用浏览器插件xpath helper获取提取信息位置</h3><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220302172400.png"></p>
 <h3 id="解析html页面"><a href="#解析html页面" class="headerlink" title="解析html页面"></a>解析html页面</h3><pre><code>from lxml import etree
 s=etree.HTML(r.text)
 s.xpath(&#39;//h2/a&#39;)
 </code></pre>
-<p><img src="https://gitee.com/Fox615/images/raw/master/20220303192349.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303192349.png"></p>
 <h3 id="显示提取关键字内容"><a href="#显示提取关键字内容" class="headerlink" title="显示提取关键字内容"></a>显示提取关键字内容</h3><pre><code>for elem in s.path(&#39;//path/a&#39;):
     print(elem.text.strip())
 </code></pre>
-<p><img src="https://gitee.com/Fox615/images/raw/master/20220303192441.png"><br>函数strip： <a target="_blank" rel="noopener" href="https://www.runoob.com/python/att-string-strip.html">https://www.runoob.com/python/att-string-strip.html</a></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303192441.png"><br>函数strip： <a target="_blank" rel="noopener" href="https://www.runoob.com/python/att-string-strip.html">https://www.runoob.com/python/att-string-strip.html</a></p>
 <h3 id="遍历打印所有的文本内容地址"><a href="#遍历打印所有的文本内容地址" class="headerlink" title="遍历打印所有的文本内容地址"></a>遍历打印所有的文本内容地址</h3><pre><code>for elem in s.xpath(&#39;//h2/a&#39;):
     print(elem.itertext())
 </code></pre>
-<p>*函数itertext:从元素中提取文本，剥离标签<br><img src="https://gitee.com/Fox615/images/raw/master/20220303193129.png"></p>
+<p>*函数itertext:从元素中提取文本，剥离标签<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303193129.png"></p>
 <h3 id="连接文本，去掉空格和换行符"><a href="#连接文本，去掉空格和换行符" class="headerlink" title="连接文本，去掉空格和换行符"></a>连接文本，去掉空格和换行符</h3><pre><code>for elem in s.xpath(&#39;//h2/a&#39;):
     print(&#39;&#39;.join(elem.itertext()).replace(&#39; &#39;,&#39;&#39;)/replace(&#39;\n&#39;,&#39;&#39;))
 </code></pre>
-<p><img src="https://gitee.com/Fox615/images/raw/master/20220303193611.png"></p>
-<h3 id="自动翻页爬取"><a href="#自动翻页爬取" class="headerlink" title="自动翻页爬取"></a>自动翻页爬取</h3><p><strong>方法一</strong><br>经过观察发现，当实现翻页时，各个页面的url出现了规律性的变化，  真个链接只有start后面的数字在发生变法，我们就通过函数来实现按该链接的规律性变化，然后实现翻页<br><img src="https://gitee.com/Fox615/images/raw/master/20220308213655.png"><br><strong>方法二</strong><br>可以利用当前页面中存在下一页的按钮进行翻页，将下一页按钮的链接拼接到豆瓣主页后面，形成新的下一页链接<br><img src="https://gitee.com/Fox615/images/raw/master/20220308214223.png"></p>
-<h1 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h1><p>在主板块下，抓取对应子板块内容，需要在xpath路径前加上一点。<br><img src="https://gitee.com/Fox615/images/raw/master/20220306100804.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303193611.png"></p>
+<h3 id="自动翻页爬取"><a href="#自动翻页爬取" class="headerlink" title="自动翻页爬取"></a>自动翻页爬取</h3><p><strong>方法一</strong><br>经过观察发现，当实现翻页时，各个页面的url出现了规律性的变化，  真个链接只有start后面的数字在发生变法，我们就通过函数来实现按该链接的规律性变化，然后实现翻页<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220308213655.png"><br><strong>方法二</strong><br>可以利用当前页面中存在下一页的按钮进行翻页，将下一页按钮的链接拼接到豆瓣主页后面，形成新的下一页链接<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220308214223.png"></p>
+<h1 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h1><p>在主板块下，抓取对应子板块内容，需要在xpath路径前加上一点。<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220306100804.png"></p>
 <hr>
-<h3 id="保存爬取内容到本地"><a href="#保存爬取内容到本地" class="headerlink" title="保存爬取内容到本地"></a>保存爬取内容到本地</h3><p>使用with open 函数对csv文件进行读写，将book_info的数据列表写入文件中，writerows多行写入<br><img src="https://gitee.com/Fox615/images/raw/master/20220308220356.png"></p>
+<h3 id="保存爬取内容到本地"><a href="#保存爬取内容到本地" class="headerlink" title="保存爬取内容到本地"></a>保存爬取内容到本地</h3><p>使用with open 函数对csv文件进行读写，将book_info的数据列表写入文件中，writerows多行写入<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220308220356.png"></p>
 
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">

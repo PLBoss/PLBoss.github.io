@@ -160,10 +160,10 @@ soup.body.parents//用于遍历所有先辈节点
 <p>查看平行标签的上一个标签</p>
 <pre><code>soup.a.previous_sibing//查看a标签的上一个标签
 </code></pre>
-<p><img src="https://gitee.com/Fox615/images/raw/master/20220224220339.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220224220339.png"></p>
 <h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><h2 id="信息标记的三种方式"><a href="#信息标记的三种方式" class="headerlink" title="信息标记的三种方式"></a>信息标记的三种方式</h2><h3 id="xml（与html相似）"><a href="#xml（与html相似）" class="headerlink" title="xml（与html相似）"></a>xml（与html相似）</h3><p>主要用来internet上的信息交互与传递</p>
-<h3 id="jason-键值对-含有双引号）"><a href="#jason-键值对-含有双引号）" class="headerlink" title="jason(键值对,含有双引号）"></a>jason(键值对,含有双引号）</h3><p>主要应用于云端和节点的信息通信<br><img src="https://gitee.com/Fox615/images/raw/master/20220228201941.png"><br>可以在键值对中嵌套键值对</p>
-<h3 id="Yaml-键值对形式，但无双引号）"><a href="#Yaml-键值对形式，但无双引号）" class="headerlink" title="Yaml(键值对形式，但无双引号）"></a>Yaml(键值对形式，但无双引号）</h3><p>各类系统的配置文件<br>利用缩进来表示所属关系<br><img src="https://gitee.com/Fox615/images/raw/master/20220228202037.png"><br>利用减号表述所属关系<br><img src="https://gitee.com/Fox615/images/raw/master/20220228202201.png"><br>用竖线表示整块数据<br><img src="https://gitee.com/Fox615/images/raw/master/20220228202330.png"></p>
+<h3 id="jason-键值对-含有双引号）"><a href="#jason-键值对-含有双引号）" class="headerlink" title="jason(键值对,含有双引号）"></a>jason(键值对,含有双引号）</h3><p>主要应用于云端和节点的信息通信<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228201941.png"><br>可以在键值对中嵌套键值对</p>
+<h3 id="Yaml-键值对形式，但无双引号）"><a href="#Yaml-键值对形式，但无双引号）" class="headerlink" title="Yaml(键值对形式，但无双引号）"></a>Yaml(键值对形式，但无双引号）</h3><p>各类系统的配置文件<br>利用缩进来表示所属关系<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202037.png"><br>利用减号表述所属关系<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202201.png"><br>用竖线表示整块数据<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202330.png"></p>
 <h2 id="信息提取的一般方法"><a href="#信息提取的一般方法" class="headerlink" title="信息提取的一般方法"></a>信息提取的一般方法</h2><h3 id="形式解析与搜索方法"><a href="#形式解析与搜索方法" class="headerlink" title="形式解析与搜索方法"></a>形式解析与搜索方法</h3><h4 id="方法find-all的使用"><a href="#方法find-all的使用" class="headerlink" title="方法find_all的使用"></a>方法find_all的使用</h4><pre><code>soup.find_all(&#39;a&#39;)//查找所有的a标签,默认查找所有的子孙
 soup.find_all(&#39;a&#39;，recursive=false)//查找所有的a标签,查找子节点
 soup.find_all(&#39;a&#39;,&#39;b&#39;)//查找a和b标签
@@ -181,8 +181,8 @@ soup.find_all(string =re.compile (&quot;python&quot;))//检索所有包含字符
 </code></pre>
 <h3 id="常用正则"><a href="#常用正则" class="headerlink" title="常用正则"></a>常用正则</h3><pre><code>py+//匹配以p开头且后面有一个或无穷多个y的字符串
 </code></pre>
-<p><img src="https://gitee.com/Fox615/images/raw/master/20220310195658.png"></p>
-<h3 id="常用操作符"><a href="#常用操作符" class="headerlink" title="常用操作符"></a>常用操作符</h3><p><img src="https://gitee.com/Fox615/images/raw/master/20220310195430.png"><br><img src="https://gitee.com/Fox615/images/raw/master/20220310195518.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195658.png"></p>
+<h3 id="常用操作符"><a href="#常用操作符" class="headerlink" title="常用操作符"></a>常用操作符</h3><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195430.png"><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195518.png"></p>
 <pre><code>re.sub(pattern,repl,string)//将string中符合pattern的字符串使用repl进行替换
 re.finiditer(pattern,string) //将匹配到的字符串整成一个可以循环的列表，使用for循环可以取出其中的元素
 re.compile(pattern) 将正则表达式的字符串形式编译成正则表达式对象
@@ -195,15 +195,15 @@ martch.re //获取匹配的正则表达式
 martch.pos //获取开始匹配的位置
 martch.endpos //获取结束匹配的位置
 </code></pre>
-<h4 id="面向对象re库用法"><a href="#面向对象re库用法" class="headerlink" title="面向对象re库用法"></a>面向对象re库用法</h4><p><img src="https://gitee.com/Fox615/images/raw/master/20220310201212.png"><br>经过一次编译，以后都可以直接使用，以此加快程序的运行    </p>
+<h4 id="面向对象re库用法"><a href="#面向对象re库用法" class="headerlink" title="面向对象re库用法"></a>面向对象re库用法</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310201212.png"><br>经过一次编译，以后都可以直接使用，以此加快程序的运行    </p>
 <p>###re函数的主要功能</p>
-<p><img src="https://gitee.com/Fox615/images/raw/master/20220310195121.png"></p>
-<h3 id="re库的贪婪匹配和最小匹配"><a href="#re库的贪婪匹配和最小匹配" class="headerlink" title="re库的贪婪匹配和最小匹配"></a>re库的贪婪匹配和最小匹配</h3><p>re库默认的是贪婪匹配，返回匹配到的最长的字符串<br><img src="https://gitee.com/Fox615/images/raw/master/20220310203514.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195121.png"></p>
+<h3 id="re库的贪婪匹配和最小匹配"><a href="#re库的贪婪匹配和最小匹配" class="headerlink" title="re库的贪婪匹配和最小匹配"></a>re库的贪婪匹配和最小匹配</h3><p>re库默认的是贪婪匹配，返回匹配到的最长的字符串<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310203514.png"></p>
 <hr>
 <h2 id="lxml库"><a href="#lxml库" class="headerlink" title="lxml库"></a>lxml库</h2><p>官方文档 <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/lxml/">https://www.w3cschool.cn/lxml/</a></p>
 <h3 id="Scapy爬虫框架-5-2）"><a href="#Scapy爬虫框架-5-2）" class="headerlink" title="Scapy爬虫框架(5+2）"></a>Scapy爬虫框架(5+2）</h3><h4 id="Scrapy的安装"><a href="#Scrapy的安装" class="headerlink" title="Scrapy的安装"></a>Scrapy的安装</h4><pre><code>pip install Scrapy
 </code></pre>
-<h4 id="Scrapy的框架"><a href="#Scrapy的框架" class="headerlink" title="Scrapy的框架"></a>Scrapy的框架</h4><p><img src="https://gitee.com/Fox615/images/raw/master/20220316195813.png"></p>
+<h4 id="Scrapy的框架"><a href="#Scrapy的框架" class="headerlink" title="Scrapy的框架"></a>Scrapy的框架</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220316195813.png"></p>
 <p>Spider</p>
 <ul>
 <li>解析Downloader返回的响应(Response)</li>
@@ -236,14 +236,14 @@ scrapy shell url //启动URL调试命令行
 </code></pre>
 <h4 id="Scrapy基础"><a href="#Scrapy基础" class="headerlink" title="Scrapy基础"></a>Scrapy基础</h4><p>#####第一步：创建scrapy项目</p>
 <p>在自己创建存储项目的文件夹内，按住shift然后右键，选择打开powershell 命令台，前面的两个单词是创建项目固定的，最后一个单词是项目名称</p>
-<p><img src="https://gitee.com/Fox615/images/raw/master/20220317211436.png"><br><img src="https://gitee.com/Fox615/images/raw/master/20220317212010.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317211436.png"><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212010.png"></p>
 <pre><code>scrapy startproject python123demo
 </code></pre>
-<p>#####第二步：产生demo.py<br>继续在命令台上输入 scrapy genspider python123.io ,前两个单词固定，后面是爬取页面的原始地址，这个可以在创建demo后，修改爬取网页的地址<br><img src="https://gitee.com/Fox615/images/raw/master/20220317212221.png"><br><img src="https://gitee.com/Fox615/images/raw/master/20220317212043.png"></p>
+<p>#####第二步：产生demo.py<br>继续在命令台上输入 scrapy genspider python123.io ,前两个单词固定，后面是爬取页面的原始地址，这个可以在创建demo后，修改爬取网页的地址<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212221.png"><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212043.png"></p>
 <p>#####第三步：修改demo</p>
-<p><img src="https://gitee.com/Fox615/images/raw/master/20220317213550.png"></p>
-<p>#####第四步：运行爬虫<br>继续在命令台输入 scrapy crawl demo<br><img src="https://gitee.com/Fox615/images/raw/master/20220317212523.png"></p>
-<p>#####结果：<br><img src="https://gitee.com/Fox615/images/raw/master/20220317213244.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213550.png"></p>
+<p>#####第四步：运行爬虫<br>继续在命令台输入 scrapy crawl demo<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212523.png"></p>
+<p>#####结果：<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213244.png"></p>
 <h4 id="yield生成器"><a href="#yield生成器" class="headerlink" title="yield生成器"></a>yield生成器</h4><ul>
 <li><p>生成器是一个不断产生值的函数</p>
 </li>
@@ -298,7 +298,7 @@ scrapy shell url //启动URL调试命令行
 <p>Response类  </p>
 <pre><code>class scrapy.http.Response()
 </code></pre>
-<p><img src="https://gitee.com/Fox615/images/raw/master/20220321212306.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220321212306.png"></p>
 <p>Item类 </p>
 <pre><code> class scrapy.http.Response()
 </code></pre>
