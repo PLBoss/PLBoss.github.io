@@ -35,15 +35,15 @@
                 <div class="header-subinfo">
                     <p class="article-info-text">
                         <span>
-                            <i class="iconfont icon-time"></i> 发表时间：2022-04-22
+                            <i class="iconfont icon-time"></i> 发表时间：2022-09-04
                         </span>
                         
-                            <span id="/2022/04/22/不同版本python安装包/" class="leancloud_visitors" data-flag-title="">
+                            <span id="/2022/09/04/HTML+Css+Javascript/" class="leancloud_visitors" data-flag-title="">
                                 <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
                             </span>
                         
                         <span>
-                            <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2022/04/22/不同版本python安装包/"></span>
+                            <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2022/09/04/HTML+Css+Javascript/"></span>
                         </span>  
                     </p>                 
                 </div>
@@ -57,12 +57,141 @@
         <div id="article">
     <div class="toc"></div>
     <div class="article-body">
-        <p>##方法一<br>###第一步 找到想要安装包的python版本的scripts文件夹<br>###第二步 将cmd的路径跳转到该文件夹目录下<br>###第三步 输入安装命令<br>    pip intall </p>
-<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220422121618.png"></p>
-<p>##方法二</p>
-<pre><code>pip install -t D:\python3.5(32bit)\Lib\site-packages -i https://pypi.douban.com/simple PyInstaller
+        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="HTML页面的基本结构"><a href="#HTML页面的基本结构" class="headerlink" title="HTML页面的基本结构"></a>HTML页面的基本结构</h2><pre><code>&lt;html&gt;//整个页面
+&lt;head&gt; &lt;/head&gt; //页面头部
+&lt;body&gt; &lt;/body&gt; //内容主体
+&lt;/html&gt;
 </code></pre>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="双标签"><a href="#双标签" class="headerlink" title="双标签"></a>双标签</h3><p>双标签有开始标签和结束标签一起构成，内容写在两个标签之间</p>
+<pre><code>&lt;p&gt; &lt;/p&gt;#段落标签
+&lt;ul&gt; &lt;/ul&gt;#无序列表标签
+&lt;h1&gt; &lt;/h1&gt;#标题标签
+&lt;table&gt; &lt;/tabel&gt;#/表格标签
+</code></pre>
+<h3 id="单标签"><a href="#单标签" class="headerlink" title="单标签"></a>单标签</h3><p>单标签只有一个标签构成</p>
+<pre><code>&lt;br/&gt;#换行标签
+&lt;hr/&gt;#建立水平线
+&lt;meta/&gt;元素提供有关页面的元信息
+&lt;img/&gt;#在页面插入图片 
+</code></pre>
+<h3 id="标签属性"><a href="#标签属性" class="headerlink" title="标签属性"></a>标签属性</h3><p>设置标签的样式和显示格式</p>
+<pre><code>&lt;p align=&quot;center&quot;&gt;文字 &lt;/p&gt;设置显示方式为居中显示
+</code></pre>
+<h3 id="内嵌样式标签"><a href="#内嵌样式标签" class="headerlink" title="内嵌样式标签"></a>内嵌样式标签</h3><p>在head标签中加入style标签</p>
+<pre><code>&lt;style&gt;
+    p&#123;
+        background:green #设置标签p的背景为绿色
+            &#125;
+ &lt;/style&gt;
+</code></pre>
+<h3 id="注释标签"><a href="#注释标签" class="headerlink" title="注释标签"></a>注释标签</h3><p>在HTML中加入注释有助于其他人理解，和其他语言的注释方式略微有点不同</p>
+<pre><code>&lt;!--这是一个注释--&gt;
+</code></pre>
+<p>###常用标签<br>    <h1>这是一级标题标签 </h1><br>    <p> 这是段落标签 </p><br>    </br>这是换行标签<br>    </nobr>这是不换行标签<br>    <hr>水平线</p>
+<h3 id="特殊字符的输入"><a href="#特殊字符的输入" class="headerlink" title="特殊字符的输入"></a>特殊字符的输入</h3><pre><code>$nbsp 这是空格
+</code></pre>
+<h1 id="Css"><a href="#Css" class="headerlink" title="Css"></a>Css</h1><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>CSS被称为层叠样式单，用与描述结构文档的表现方式，主要用于网页风格的设计，包括字体大小的设计，颜色，背景以及元素的精确定位，增强文档的表现力。</p>
+<h3 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h3><pre><code>p &#123;color:red ;size:20px;&#125; 设置p标签的颜色为红色，字体大小为20px
+</code></pre>
+<h3 id="使用css样式的方法"><a href="#使用css样式的方法" class="headerlink" title="使用css样式的方法"></a>使用css样式的方法</h3><h4 id="内部样式"><a href="#内部样式" class="headerlink" title="内部样式"></a>内部样式</h4><p>内部样式就是直接在标签内设置该标签的样式属性</p>
+<pre><code>&lt;p style=&quot;color:red ,frontsize:20px;front-family:微软雅黑&gt; 内部样式设置&lt;/p&gt;
+</code></pre>
+<p>也可以将样式属性直接放在头部的style标签中</p>
+<pre><code>&lt;head&gt;
+&lt;style&gt;  
+        p&#123;
+            color:red;
+            font-size:20px;
+            
+            &#125;
+         &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+<h4 id="外部样式"><a href="#外部样式" class="headerlink" title="外部样式"></a>外部样式</h4><p>外部样式是直接将所有的样式写进一个css文件中，然后从HTML文件中直接调用该文件<br>头部标签中加入  </p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; #这里注意将css文件和HTML文件放在同一级目录
+</code></pre>
+<p>导入外部样式表(style标签中加入）<br>    @import “style.css”;</p>
+<h3 id="css的特性"><a href="#css的特性" class="headerlink" title="css的特性"></a>css的特性</h3><h4 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h4><p>权重低的选择器可以被权重高的选择器覆盖掉<br>    #a ID选择器 权重向下依次递减<br>    .b 类选择器<br>    P 标签选择器</p>
+<h4 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h4><p>子标签的属性可以有父标签的属性定义<br>有其父必有其子吗？答案是不一定的，比如a标签不能继承颜色，h标签不能继承字体大小</p>
+<h4 id="优先性"><a href="#优先性" class="headerlink" title="优先性"></a>优先性</h4><p>!important&gt;行内样式&gt;ID选择器&gt;类选择器&gt;标签选择器&gt;通配符&gt;继承&gt;浏览器属性</p>
+<h3 id="css样式选择器"><a href="#css样式选择器" class="headerlink" title="css样式选择器"></a>css样式选择器</h3><pre><code>h1&#123;&#125; //标签选择器
+*&#123;&#125;  //通配符
+#id&#123;&#125; //id选择器
+.class&#123;&#125; //类选择器
+p,div&#123;&#125;  //群选择器
+p .class a &#123;&#125; //包含选择器 选择某个特定标签下的子标签
+ul.class &gt;li&gt;a &#123;&#125; //子类选择器
+ul h2~p //兄弟选择器
+</code></pre>
+<h4 id="动态伪类选择器"><a href="#动态伪类选择器" class="headerlink" title="动态伪类选择器"></a>动态伪类选择器</h4><p>伪类选择器并不是正真的选择元素的选择器，而是针对伪元素</p>
+<pre><code>li:bedfore&#123; &#125; //在li标签之前插入
+li:after &#123; &#125; //在li标签后插入
+li:before &#123; content:counter(order,upper-roman)&quot;.&quot;;&#125; //设置编号
+</code></pre>
+<h4 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h4><p>结构性伪类选择器，利用文档结构树来实现元素的过滤，类似于正则表达式的匹配，这个只不过匹配的是文档元素</p>
+<pre><code>：root //匹配文档的根元素
+:first-child //匹配父元素的第一个子元素
+:last-child  // 匹配父元素的最后一个子元素
+</code></pre>
+<h5 id="UI伪类选择器"><a href="#UI伪类选择器" class="headerlink" title="UI伪类选择器"></a>UI伪类选择器</h5><p>只有存在某种状态才可能某种样式出现<br>    ：hover //鼠标悬浮的样式<br>    :active //按住左键不松开的样式<br>    :focus  //获得指针输入时的样式</p>
+<h5 id="单选框与复选框样式"><a href="#单选框与复选框样式" class="headerlink" title="单选框与复选框样式"></a>单选框与复选框样式</h5><pre><code>input[type=&quot;checkbox&quot;]：checked&#123;&#125;  //单选框
+input[type=&quot;text&quot;]::selection&#123;&#125;    //复选框
+</code></pre>
+<h5 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h5><pre><code>[class^=d]匹配类名以d开始的每个元素
+[class$=d]匹配以类名d结尾的每个元素
+</code></pre>
+<h3 id="css网页美化"><a href="#css网页美化" class="headerlink" title="css网页美化"></a>css网页美化</h3><h4 id="设置字体粗细"><a href="#设置字体粗细" class="headerlink" title="设置字体粗细"></a>设置字体粗细</h4><pre><code>font-weight:bold; //加粗字体
+font-weight:bolder; //超级加粗
+font-weight:lighter; //细字体
+font-weight:normal; //默认字体
+</code></pre>
+<h5 id="设置字体风格"><a href="#设置字体风格" class="headerlink" title="设置字体风格"></a>设置字体风格</h5><pre><code>font-style:normal //默认字体
+font-style:oblique //倾斜字体
+font-style:italic  //斜体
+font-style:inherit  //继承父元素字体
+</code></pre>
+<h5 id="设置字体大小"><a href="#设置字体大小" class="headerlink" title="设置字体大小"></a>设置字体大小</h5><pre><code>font-size:larger; 
+font-size:smaller;
+font-size:length;
+font-size:30px;
+</code></pre>
+<h5 id="设置字体类型"><a href="#设置字体类型" class="headerlink" title="设置字体类型"></a>设置字体类型</h5><pre><code>font-family:微软雅黑
+font-family:华文彩云
+font-family:宋体
+</code></pre>
+<h5 id="设置行高"><a href="#设置行高" class="headerlink" title="设置行高"></a>设置行高</h5><pre><code>line-height:30px //设置行高为30像素 
+</code></pre>
+<h4 id="设置复合属性"><a href="#设置复合属性" class="headerlink" title="设置复合属性"></a>设置复合属性</h4><pre><code>font:font-style font-variant font-weight font-zize font-family
+</code></pre>
+<h4 id="设置首行缩进和字符间距"><a href="#设置首行缩进和字符间距" class="headerlink" title="设置首行缩进和字符间距"></a>设置首行缩进和字符间距</h4><pre><code>text-indent:2em ;//设置两个字符的首行缩进
+letter-space:5px ;//设置字符间距
+</code></pre>
+<h4 id="设置对齐方式"><a href="#设置对齐方式" class="headerlink" title="设置对齐方式"></a>设置对齐方式</h4><pre><code>text-align:left;
+text-align:right;
+text-align:center;
+text-align:justfy; //两端对齐
+</code></pre>
+<h4 id="设置竖直对齐方式"><a href="#设置竖直对齐方式" class="headerlink" title="设置竖直对齐方式"></a>设置竖直对齐方式</h4><pre><code>vretical-align:top
+vertical-align:middle
+vertical-align:bottom 
+</code></pre>
+<h4 id="设置服务器字体"><a href="#设置服务器字体" class="headerlink" title="设置服务器字体"></a>设置服务器字体</h4><pre><code>@font-face&#123;
 
+font-family:name; /*设置服务器字体的名称*/
+scr:url(url) format(font-format) /*设置字体路径和字体格式*/
+&#125;
+</code></pre>
+<h5 id="美化网页图像"><a href="#美化网页图像" class="headerlink" title="美化网页图像"></a>美化网页图像</h5><h6 id="插入图像"><a href="#插入图像" class="headerlink" title="插入图像"></a>插入图像</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;image.jpg&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>设置图像路径</p>
+<p>最方便的方法：直接将图片放在与网页文件的统一级目录，插入图片时直接引用图片名称即可</p>
+<p>相对路径：相对与网页文件，在整个目录文件中的位置（./img.jpg)</p>
+<p>绝对路径：相对于计算机文件夹的路径（D:/img.jpg)</p>
+<h6 id="设置图像格式"><a href="#设置图像格式" class="headerlink" title="设置图像格式"></a>设置图像格式</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;image.jpg&quot; width=&quot;200px&quot; height=&quot;200px&quot;&gt; //设置图像的宽度为200px,高度也为200px</span><br><span class="line">.img &#123;</span><br><span class="line">	border:10px solid #12334;   //设置图像边框</span><br><span class="line">	opcity=0.5; //设置图像透明度</span><br><span class="line">	border-radius: 50px; //设置圆角</span><br><span class="line">	box-shadow:20px 20px #00ff00 //设置图像阴影</span><br><span class="line">	vertical-align:bottom; //设置对齐方式</span><br><span class="line">	float:left; //设置文字与图片混排方式</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="设置背景图片"><a href="#设置背景图片" class="headerlink" title="设置背景图片"></a>设置背景图片</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">	background-color:red; //设置背景颜色</span><br><span class="line">	background-img: img.jpg; //设置背景图片</span><br><span class="line">	background-repeat:no-repeat; //设置图片的平铺方式</span><br><span class="line">	background-position:left top; //设置图像的位置</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="网页美化超链接"><a href="#网页美化超链接" class="headerlink" title="网页美化超链接"></a>网页美化超链接</h5><h1 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h1>
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
             <div class="suffix-box-left">
@@ -71,7 +200,7 @@
             <div class="suffix-box-right">
                 <span class="suffix-box-title">文章作者</span>：Fox enjoy life
                 <br>
-                <span class="suffix-box-title">文章出处</span>：<a href="/2022/04/22/%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%ACpython%E5%AE%89%E8%A3%85%E5%8C%85/" target="_blank"></a>
+                <span class="suffix-box-title">文章出处</span>：<a href="/2022/09/04/HTML+Css+Javascript/" target="_blank"></a>
                 <br>
                 <span class="suffix-box-title">作者签名</span>：简单地活着, 肆意又精彩.
                 <br>
@@ -88,11 +217,8 @@
         
         <div class="article-prev-next">
             
-                <a href="/2022/09/04/HTML+Css+Javascript/" class="prev-prefix">« </a> 上一篇：    <a href="/2022/09/04/HTML+Css+Javascript/" title="发布于 2022-09-04 04:34"></a>
-                <br>
             
-            
-                <a href="/2022/04/22/%E7%94%B5%E8%84%91%E6%9F%A5%E7%9C%8BWIFI%E5%AF%86%E7%A0%81/" class="next-prefix">» </a> 下一篇：    <a href="/2022/04/22/%E7%94%B5%E8%84%91%E6%9F%A5%E7%9C%8BWIFI%E5%AF%86%E7%A0%81/" title="发布于 2022-04-22 03:21"></a>
+                <a href="/2022/04/22/%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%ACpython%E5%AE%89%E8%A3%85%E5%8C%85/" class="next-prefix">» </a> 下一篇：    <a href="/2022/04/22/%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%ACpython%E5%AE%89%E8%A3%85%E5%8C%85/" title="发布于 2022-04-22 03:31"></a>
             
         </div>
     </div>

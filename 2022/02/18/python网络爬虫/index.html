@@ -60,11 +60,14 @@
         <h3 id="爬虫介绍"><a href="#爬虫介绍" class="headerlink" title="爬虫介绍"></a>爬虫介绍</h3><pre><code>*
 </code></pre>
 <h3 id="万物皆可API"><a href="#万物皆可API" class="headerlink" title="万物皆可API"></a>万物皆可API</h3><p>API:程序之间的接口</p>
-<p>###编程环境安装<br>    requests库的安装：<br>    以管理员权限打开管理员控制台（cmd)<br>    然后输入命令 pip install requests</p>
+<h3 id="编程环境安装"><a href="#编程环境安装" class="headerlink" title="编程环境安装"></a>编程环境安装</h3><pre><code>requests库的安装：
+以管理员权限打开管理员控制台（cmd)
+然后输入命令 pip install requests
+</code></pre>
 <h4 id="测试requests库是否安装成功"><a href="#测试requests库是否安装成功" class="headerlink" title="测试requests库是否安装成功"></a>测试requests库是否安装成功</h4><pre><code>打开python的ide
 输入以下命令：
     import requets
-     r = requests.get(&quot;http://www.baidu.com&quot;)
+    r = requests.get(&quot;http://www.baidu.com&quot;)
     print(r.status_code)
 然后运行命令，显示200，则表示requests库安装成功
 </code></pre>
@@ -91,7 +94,7 @@ try:
  r=requests.request(get,url,timeout=30)
  r.raise_for_status()
  r.encoding=r.apprent_encoding
-   return r.text
+  return r.text
 except:
     return &quot;error&quot;
 </code></pre>
@@ -245,22 +248,15 @@ scrapy shell url //启动URL调试命令行
 <p>#####第四步：运行爬虫<br>继续在命令台输入 scrapy crawl demo<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212523.png"></p>
 <p>#####结果：<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213244.png"></p>
 <h4 id="yield生成器"><a href="#yield生成器" class="headerlink" title="yield生成器"></a>yield生成器</h4><ul>
-<li><p>生成器是一个不断产生值的函数</p>
-</li>
-<li><p>包含yild语句的函数是一个生成器</p>
-</li>
-<li><p>生成器每次产生一个值（yield语句），函数被冻结，被唤醒后在产生一个值，唤醒后还是从上一个执行的位置开始执行</p>
-</li>
-<li><p>经常与循环搭配使用</p>
-<h4 id="使用实列"><a href="#使用实列" class="headerlink" title="使用实列"></a>使用实列</h4><p>  def gen(n):</p>
-<pre><code>  for i in range(n):
+<li>生成器是一个不断产生值的函数</li>
+<li>包含yild语句的函数是一个生成器</li>
+<li>生成器每次产生一个值（yield语句），函数被冻结，被唤醒后在产生一个值，唤醒后还是从上一个执行的位置开始执行</li>
+<li>经常与循环搭配使用<h4 id="使用实列"><a href="#使用实列" class="headerlink" title="使用实列"></a>使用实列</h4>  def gen(n):<pre><code>  for i in range(n):
       yield i**2
 </code></pre>
-<p>  for i in gen(5):</p>
-<pre><code>      print(i,&quot;&quot;,end=&quot;&quot;)
+  for i in gen(5):<pre><code>      print(i,&quot;&quot;,end=&quot;&quot;)
 </code></pre>
-<p>  结果： 0 1 4 9 16</p>
-</li>
+  结果： 0 1 4 9 16</li>
 </ul>
 <p>#####生成器的优点（相比与普通的列表返回方法）</p>
 <ul>
