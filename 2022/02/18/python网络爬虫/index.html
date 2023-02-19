@@ -1,218 +1,299 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-default-color-scheme=auto>
 
-<!-- Head tag -->
+
+
 <head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="爬虫介绍*  万物皆可APIAPI:程序之间的接口 编程环境安装requests库的安装： 以管理员权限打开管理员控制台（cmd) 然后输入命令 pip install requests  测试requests库是否安装成功打开python的ide 输入以下命令：     import requets     r &#x3D; requests.get(&quot;http:&#x2F;&#x2F;www.baidu.com&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python网络爬虫">
+<meta property="og:url" content="http://example.com/2022/02/18/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="爬虫介绍*  万物皆可APIAPI:程序之间的接口 编程环境安装requests库的安装： 以管理员权限打开管理员控制台（cmd) 然后输入命令 pip install requests  测试requests库是否安装成功打开python的ide 输入以下命令：     import requets     r &#x3D; requests.get(&quot;http:&#x2F;&#x2F;www.baidu.com&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220224220339.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228201941.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202037.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202201.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202330.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195658.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195430.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195518.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310201212.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195121.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310203514.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220316195813.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317211436.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212010.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212221.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212043.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213550.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212523.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213244.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220321212306.png">
+<meta property="article:published_time" content="2022-02-18T07:26:39.000Z">
+<meta property="article:modified_time" content="2022-07-23T08:26:42.829Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220224220339.png">
+  
+  
+  
+  <title>python网络爬虫 - Hexo</title>
 
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-    <!--Description-->
-
-    
-
-    
-        <meta name="description" content="爬虫介绍*
-
-万物皆可APIAPI:程序之间的接口
-编程环境安装requests库的安装：
-以管理员权限打开管理员控制台（cmd)
-然后输入命令 pip install requests
-
-测试requests库是否安装成功打开python的ide
-输入以下命令：
-    import requet"/>
-    
-
-    <!--Author-->
-    
-        <meta name="author" content="John Doe"/>
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="python网络爬虫"/>
-    
-
-    <!--Open Graph Description-->
-    
-        <meta property="og:description" content="爬虫介绍*
-
-万物皆可APIAPI:程序之间的接口
-编程环境安装requests库的安装：
-以管理员权限打开管理员控制台（cmd)
-然后输入命令 pip install requests
-
-测试requests库是否安装成功打开python的ide
-输入以下命令：
-    import requet"/>
-    
-
-    <!--Open Graph Site Name-->
-        <meta property="og:site_name" content="Hexo"/>
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="article"/>
-    
-
-    <!--Page Cover-->
-    
-    
-        <meta property="og:image" content="http://example.comimg/home-bg.jpg"/>
-    
-
-        <meta name="twitter:card" content="summary_large_image"/>
-
-    
-
-    
-        <meta name="twitter:image" content="http://example.comimg/home-bg.jpg"/>
-    
-
-    <!-- Title -->
-    
-    <title>python网络爬虫 - Hexo</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-
-    <!-- Custom CSS -->
-    
-<link rel="stylesheet" href="/css/style.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
 
-    <!-- Gallery -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
-    <!-- Google Analytics -->
-    
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
-    <!-- favicon -->
-    
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <body>
+  
 
-    <!-- Menu -->
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Configurable Title</a>
-        </div>
+  <header>
+    
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                
-                    <li>
-                        <a href="/">
-                            
-                                Home
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/archives">
-                            
-                                Archives
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/tags">
-                            
-                                Tags
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/categories">
-                            
-                                Categories
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-clean-blog">
-                            
-                                <i class="fa fa-github fa-stack-2x"></i>
-                            
-                        </a>
-                    </li>
-                
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
-    <!-- /.container -->
+  </div>
 </nav>
 
-    <!-- Main Content -->
-    <!-- Page Header -->
-<!-- Set your background image for this header in your post front-matter: cover -->
+  
 
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>python网络爬虫</h1>
-                    
-                    <span class="meta">
-                        <!-- Date and Author -->
-                        
-                        
-                            2022-02-18
-                        
-                    </span>
-                </div>
-            </div>
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="python网络爬虫"></span>
+          
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-02-18 15:26" pubdate>
+          February 18, 2022 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.6k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          39 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
     </div>
-</header>
+  </div>
+</div>
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
+</div>
 
-            <!-- Tags and categories -->
-           
+  </header>
 
-            <!-- Gallery -->
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">python网络爬虫</h1>
             
-
-            <!-- Post Main Content -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            
+              <div class="markdown-body">
+                
                 <h3 id="爬虫介绍"><a href="#爬虫介绍" class="headerlink" title="爬虫介绍"></a>爬虫介绍</h3><pre><code>*
 </code></pre>
 <h3 id="万物皆可API"><a href="#万物皆可API" class="headerlink" title="万物皆可API"></a>万物皆可API</h3><p>API:程序之间的接口</p>
@@ -319,10 +400,10 @@ soup.body.parents//用于遍历所有先辈节点
 <p>查看平行标签的上一个标签</p>
 <pre><code>soup.a.previous_sibing//查看a标签的上一个标签
 </code></pre>
-<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220224220339.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220224220339.png" srcset="/img/loading.gif" lazyload></p>
 <h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><h2 id="信息标记的三种方式"><a href="#信息标记的三种方式" class="headerlink" title="信息标记的三种方式"></a>信息标记的三种方式</h2><h3 id="xml（与html相似）"><a href="#xml（与html相似）" class="headerlink" title="xml（与html相似）"></a>xml（与html相似）</h3><p>主要用来internet上的信息交互与传递</p>
-<h3 id="jason-键值对-含有双引号）"><a href="#jason-键值对-含有双引号）" class="headerlink" title="jason(键值对,含有双引号）"></a>jason(键值对,含有双引号）</h3><p>主要应用于云端和节点的信息通信<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228201941.png"><br>可以在键值对中嵌套键值对</p>
-<h3 id="Yaml-键值对形式，但无双引号）"><a href="#Yaml-键值对形式，但无双引号）" class="headerlink" title="Yaml(键值对形式，但无双引号）"></a>Yaml(键值对形式，但无双引号）</h3><p>各类系统的配置文件<br>利用缩进来表示所属关系<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202037.png"><br>利用减号表述所属关系<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202201.png"><br>用竖线表示整块数据<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202330.png"></p>
+<h3 id="jason-键值对-含有双引号）"><a href="#jason-键值对-含有双引号）" class="headerlink" title="jason(键值对,含有双引号）"></a>jason(键值对,含有双引号）</h3><p>主要应用于云端和节点的信息通信<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228201941.png" srcset="/img/loading.gif" lazyload><br>可以在键值对中嵌套键值对</p>
+<h3 id="Yaml-键值对形式，但无双引号）"><a href="#Yaml-键值对形式，但无双引号）" class="headerlink" title="Yaml(键值对形式，但无双引号）"></a>Yaml(键值对形式，但无双引号）</h3><p>各类系统的配置文件<br>利用缩进来表示所属关系<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202037.png" srcset="/img/loading.gif" lazyload><br>利用减号表述所属关系<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202201.png" srcset="/img/loading.gif" lazyload><br>用竖线表示整块数据<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202330.png" srcset="/img/loading.gif" lazyload></p>
 <h2 id="信息提取的一般方法"><a href="#信息提取的一般方法" class="headerlink" title="信息提取的一般方法"></a>信息提取的一般方法</h2><h3 id="形式解析与搜索方法"><a href="#形式解析与搜索方法" class="headerlink" title="形式解析与搜索方法"></a>形式解析与搜索方法</h3><h4 id="方法find-all的使用"><a href="#方法find-all的使用" class="headerlink" title="方法find_all的使用"></a>方法find_all的使用</h4><pre><code>soup.find_all(&#39;a&#39;)//查找所有的a标签,默认查找所有的子孙
 soup.find_all(&#39;a&#39;，recursive=false)//查找所有的a标签,查找子节点
 soup.find_all(&#39;a&#39;,&#39;b&#39;)//查找a和b标签
@@ -340,8 +421,8 @@ soup.find_all(string =re.compile (&quot;python&quot;))//检索所有包含字符
 </code></pre>
 <h3 id="常用正则"><a href="#常用正则" class="headerlink" title="常用正则"></a>常用正则</h3><pre><code>py+//匹配以p开头且后面有一个或无穷多个y的字符串
 </code></pre>
-<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195658.png"></p>
-<h3 id="常用操作符"><a href="#常用操作符" class="headerlink" title="常用操作符"></a>常用操作符</h3><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195430.png"><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195518.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195658.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="常用操作符"><a href="#常用操作符" class="headerlink" title="常用操作符"></a>常用操作符</h3><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195430.png" srcset="/img/loading.gif" lazyload><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195518.png" srcset="/img/loading.gif" lazyload></p>
 <pre><code>re.sub(pattern,repl,string)//将string中符合pattern的字符串使用repl进行替换
 re.finiditer(pattern,string) //将匹配到的字符串整成一个可以循环的列表，使用for循环可以取出其中的元素
 re.compile(pattern) 将正则表达式的字符串形式编译成正则表达式对象
@@ -354,15 +435,15 @@ martch.re //获取匹配的正则表达式
 martch.pos //获取开始匹配的位置
 martch.endpos //获取结束匹配的位置
 </code></pre>
-<h4 id="面向对象re库用法"><a href="#面向对象re库用法" class="headerlink" title="面向对象re库用法"></a>面向对象re库用法</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310201212.png"><br>经过一次编译，以后都可以直接使用，以此加快程序的运行    </p>
+<h4 id="面向对象re库用法"><a href="#面向对象re库用法" class="headerlink" title="面向对象re库用法"></a>面向对象re库用法</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310201212.png" srcset="/img/loading.gif" lazyload><br>经过一次编译，以后都可以直接使用，以此加快程序的运行    </p>
 <p>###re函数的主要功能</p>
-<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195121.png"></p>
-<h3 id="re库的贪婪匹配和最小匹配"><a href="#re库的贪婪匹配和最小匹配" class="headerlink" title="re库的贪婪匹配和最小匹配"></a>re库的贪婪匹配和最小匹配</h3><p>re库默认的是贪婪匹配，返回匹配到的最长的字符串<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310203514.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195121.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="re库的贪婪匹配和最小匹配"><a href="#re库的贪婪匹配和最小匹配" class="headerlink" title="re库的贪婪匹配和最小匹配"></a>re库的贪婪匹配和最小匹配</h3><p>re库默认的是贪婪匹配，返回匹配到的最长的字符串<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310203514.png" srcset="/img/loading.gif" lazyload></p>
 <hr>
 <h2 id="lxml库"><a href="#lxml库" class="headerlink" title="lxml库"></a>lxml库</h2><p>官方文档 <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/lxml/">https://www.w3cschool.cn/lxml/</a></p>
 <h3 id="Scapy爬虫框架-5-2）"><a href="#Scapy爬虫框架-5-2）" class="headerlink" title="Scapy爬虫框架(5+2）"></a>Scapy爬虫框架(5+2）</h3><h4 id="Scrapy的安装"><a href="#Scrapy的安装" class="headerlink" title="Scrapy的安装"></a>Scrapy的安装</h4><pre><code>pip install Scrapy
 </code></pre>
-<h4 id="Scrapy的框架"><a href="#Scrapy的框架" class="headerlink" title="Scrapy的框架"></a>Scrapy的框架</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220316195813.png"></p>
+<h4 id="Scrapy的框架"><a href="#Scrapy的框架" class="headerlink" title="Scrapy的框架"></a>Scrapy的框架</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220316195813.png" srcset="/img/loading.gif" lazyload></p>
 <p>Spider</p>
 <ul>
 <li>解析Downloader返回的响应(Response)</li>
@@ -395,14 +476,14 @@ scrapy shell url //启动URL调试命令行
 </code></pre>
 <h4 id="Scrapy基础"><a href="#Scrapy基础" class="headerlink" title="Scrapy基础"></a>Scrapy基础</h4><p>#####第一步：创建scrapy项目</p>
 <p>在自己创建存储项目的文件夹内，按住shift然后右键，选择打开powershell 命令台，前面的两个单词是创建项目固定的，最后一个单词是项目名称</p>
-<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317211436.png"><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212010.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317211436.png" srcset="/img/loading.gif" lazyload><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212010.png" srcset="/img/loading.gif" lazyload></p>
 <pre><code>scrapy startproject python123demo
 </code></pre>
-<p>#####第二步：产生demo.py<br>继续在命令台上输入 scrapy genspider python123.io ,前两个单词固定，后面是爬取页面的原始地址，这个可以在创建demo后，修改爬取网页的地址<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212221.png"><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212043.png"></p>
+<p>#####第二步：产生demo.py<br>继续在命令台上输入 scrapy genspider python123.io ,前两个单词固定，后面是爬取页面的原始地址，这个可以在创建demo后，修改爬取网页的地址<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212221.png" srcset="/img/loading.gif" lazyload><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212043.png" srcset="/img/loading.gif" lazyload></p>
 <p>#####第三步：修改demo</p>
-<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213550.png"></p>
-<p>#####第四步：运行爬虫<br>继续在命令台输入 scrapy crawl demo<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212523.png"></p>
-<p>#####结果：<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213244.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213550.png" srcset="/img/loading.gif" lazyload></p>
+<p>#####第四步：运行爬虫<br>继续在命令台输入 scrapy crawl demo<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212523.png" srcset="/img/loading.gif" lazyload></p>
+<p>#####结果：<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213244.png" srcset="/img/loading.gif" lazyload></p>
 <h4 id="yield生成器"><a href="#yield生成器" class="headerlink" title="yield生成器"></a>yield生成器</h4><ul>
 <li>生成器是一个不断产生值的函数</li>
 <li>包含yild语句的函数是一个生成器</li>
@@ -450,83 +531,351 @@ scrapy shell url //启动URL调试命令行
 <p>Response类  </p>
 <pre><code>class scrapy.http.Response()
 </code></pre>
-<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220321212306.png"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220321212306.png" srcset="/img/loading.gif" lazyload></p>
 <p>Item类 </p>
 <pre><code> class scrapy.http.Response()
 </code></pre>
 <h5 id="Css-selector"><a href="#Css-selector" class="headerlink" title="Css-selector"></a>Css-selector</h5><pre><code>&lt;HTML&gt;.CSS(&#39;a::attr(herf)&#39;).extract()
 </code></pre>
 
-
                 
-            </div>
-
-            <!-- Comments -->
+              </div>
             
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>python网络爬虫</div>
+      <div>http://example.com/2022/02/18/python网络爬虫/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>February 18, 2022</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
                     
-
-
+                    
+                      <a href="/2022/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="计算机操作系统">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">计算机操作系统</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/02/18/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" title="数据可视化">
+                        <span class="hidden-mobile">数据可视化</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
                 </div>
-            
-        </div>
-    </div>
-</article>
-
-    <!-- Footer -->
-    <hr />
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    
-
-                    
-
-                    
-                        <li>
-                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
-
-                    
-
-                    
-
-                    
-                </ul>
-                <p class="copyright text-muted">&copy; 2023 John Doe<br></p>
-                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
-                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+              
             </div>
+
+            
+          </article>
         </div>
+      </div>
     </div>
-</footer>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
 
 
-    <!-- After footer scripts -->
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
     
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 
-<!-- Bootstrap -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!-- Disqus Comments -->
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
 
 
 
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
 </body>
-
 </html>

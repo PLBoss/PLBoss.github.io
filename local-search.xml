@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/09/04/HTML+Css+Javascript/"/>
+    <url>/2022/09/04/HTML+Css+Javascript/</url>
+    
+    <content type="html"><![CDATA[<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="HTML页面的基本结构"><a href="#HTML页面的基本结构" class="headerlink" title="HTML页面的基本结构"></a>HTML页面的基本结构</h2><pre><code>&lt;html&gt;//整个页面&lt;head&gt; &lt;/head&gt; //页面头部&lt;body&gt; &lt;/body&gt; //内容主体&lt;/html&gt;</code></pre><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="双标签"><a href="#双标签" class="headerlink" title="双标签"></a>双标签</h3><p>双标签有开始标签和结束标签一起构成，内容写在两个标签之间</p><pre><code>&lt;p&gt; &lt;/p&gt;#段落标签&lt;ul&gt; &lt;/ul&gt;#无序列表标签&lt;h1&gt; &lt;/h1&gt;#标题标签&lt;table&gt; &lt;/tabel&gt;#/表格标签</code></pre><h3 id="单标签"><a href="#单标签" class="headerlink" title="单标签"></a>单标签</h3><p>单标签只有一个标签构成</p><pre><code>&lt;br/&gt;#换行标签&lt;hr/&gt;#建立水平线&lt;meta/&gt;元素提供有关页面的元信息&lt;img/&gt;#在页面插入图片 </code></pre><h3 id="标签属性"><a href="#标签属性" class="headerlink" title="标签属性"></a>标签属性</h3><p>设置标签的样式和显示格式</p><pre><code>&lt;p align=&quot;center&quot;&gt;文字 &lt;/p&gt;设置显示方式为居中显示</code></pre><h3 id="内嵌样式标签"><a href="#内嵌样式标签" class="headerlink" title="内嵌样式标签"></a>内嵌样式标签</h3><p>在head标签中加入style标签</p><pre><code>&lt;style&gt;    p&#123;        background:green #设置标签p的背景为绿色            &#125; &lt;/style&gt;</code></pre><h3 id="注释标签"><a href="#注释标签" class="headerlink" title="注释标签"></a>注释标签</h3><p>在HTML中加入注释有助于其他人理解，和其他语言的注释方式略微有点不同</p><pre><code>&lt;!--这是一个注释--&gt;</code></pre><p>###常用标签<br>    <h1>这是一级标题标签 </h1><br>    <p> 这是段落标签 </p><br>    </br>这是换行标签<br>    </nobr>这是不换行标签<br>    <hr>水平线</p><h3 id="特殊字符的输入"><a href="#特殊字符的输入" class="headerlink" title="特殊字符的输入"></a>特殊字符的输入</h3><pre><code>$nbsp 这是空格</code></pre><h1 id="Css"><a href="#Css" class="headerlink" title="Css"></a>Css</h1><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>CSS被称为层叠样式单，用与描述结构文档的表现方式，主要用于网页风格的设计，包括字体大小的设计，颜色，背景以及元素的精确定位，增强文档的表现力。</p><h3 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h3><pre><code>p &#123;color:red ;size:20px;&#125; 设置p标签的颜色为红色，字体大小为20px</code></pre><h3 id="使用css样式的方法"><a href="#使用css样式的方法" class="headerlink" title="使用css样式的方法"></a>使用css样式的方法</h3><h4 id="内部样式"><a href="#内部样式" class="headerlink" title="内部样式"></a>内部样式</h4><p>内部样式就是直接在标签内设置该标签的样式属性</p><pre><code>&lt;p style=&quot;color:red ,frontsize:20px;front-family:微软雅黑&gt; 内部样式设置&lt;/p&gt;</code></pre><p>也可以将样式属性直接放在头部的style标签中</p><pre><code>&lt;head&gt;&lt;style&gt;          p&#123;            color:red;            font-size:20px;                        &#125;         &lt;/style&gt;&lt;/head&gt;</code></pre><h4 id="外部样式"><a href="#外部样式" class="headerlink" title="外部样式"></a>外部样式</h4><p>外部样式是直接将所有的样式写进一个css文件中，然后从HTML文件中直接调用该文件<br>头部标签中加入  </p><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; #这里注意将css文件和HTML文件放在同一级目录</code></pre><p>导入外部样式表(style标签中加入）<br>    @import “style.css”;</p><h3 id="css的特性"><a href="#css的特性" class="headerlink" title="css的特性"></a>css的特性</h3><h4 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h4><p>权重低的选择器可以被权重高的选择器覆盖掉<br>    #a ID选择器 权重向下依次递减<br>    .b 类选择器<br>    P 标签选择器</p><h4 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h4><p>子标签的属性可以有父标签的属性定义<br>有其父必有其子吗？答案是不一定的，比如a标签不能继承颜色，h标签不能继承字体大小</p><h4 id="优先性"><a href="#优先性" class="headerlink" title="优先性"></a>优先性</h4><p>!important&gt;行内样式&gt;ID选择器&gt;类选择器&gt;标签选择器&gt;通配符&gt;继承&gt;浏览器属性</p><h3 id="css样式选择器"><a href="#css样式选择器" class="headerlink" title="css样式选择器"></a>css样式选择器</h3><pre><code>h1&#123;&#125; //标签选择器*&#123;&#125;  //通配符#id&#123;&#125; //id选择器.class&#123;&#125; //类选择器p,div&#123;&#125;  //群选择器p .class a &#123;&#125; //包含选择器 选择某个特定标签下的子标签ul.class &gt;li&gt;a &#123;&#125; //子类选择器ul h2~p //兄弟选择器</code></pre><h4 id="动态伪类选择器"><a href="#动态伪类选择器" class="headerlink" title="动态伪类选择器"></a>动态伪类选择器</h4><p>伪类选择器并不是正真的选择元素的选择器，而是针对伪元素</p><pre><code>li:bedfore&#123; &#125; //在li标签之前插入li:after &#123; &#125; //在li标签后插入li:before &#123; content:counter(order,upper-roman)&quot;.&quot;;&#125; //设置编号</code></pre><h4 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h4><p>结构性伪类选择器，利用文档结构树来实现元素的过滤，类似于正则表达式的匹配，这个只不过匹配的是文档元素</p><pre><code>：root //匹配文档的根元素:first-child //匹配父元素的第一个子元素:last-child  // 匹配父元素的最后一个子元素</code></pre><h5 id="UI伪类选择器"><a href="#UI伪类选择器" class="headerlink" title="UI伪类选择器"></a>UI伪类选择器</h5><p>只有存在某种状态才可能某种样式出现<br>    ：hover //鼠标悬浮的样式<br>    :active //按住左键不松开的样式<br>    :focus  //获得指针输入时的样式</p><h5 id="单选框与复选框样式"><a href="#单选框与复选框样式" class="headerlink" title="单选框与复选框样式"></a>单选框与复选框样式</h5><pre><code>input[type=&quot;checkbox&quot;]：checked&#123;&#125;  //单选框input[type=&quot;text&quot;]::selection&#123;&#125;    //复选框</code></pre><h5 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h5><pre><code>[class^=d]匹配类名以d开始的每个元素[class$=d]匹配以类名d结尾的每个元素</code></pre><h3 id="css网页美化"><a href="#css网页美化" class="headerlink" title="css网页美化"></a>css网页美化</h3><h4 id="设置字体粗细"><a href="#设置字体粗细" class="headerlink" title="设置字体粗细"></a>设置字体粗细</h4><pre><code>font-weight:bold; //加粗字体font-weight:bolder; //超级加粗font-weight:lighter; //细字体font-weight:normal; //默认字体</code></pre><h5 id="设置字体风格"><a href="#设置字体风格" class="headerlink" title="设置字体风格"></a>设置字体风格</h5><pre><code>font-style:normal //默认字体font-style:oblique //倾斜字体font-style:italic  //斜体font-style:inherit  //继承父元素字体</code></pre><h5 id="设置字体大小"><a href="#设置字体大小" class="headerlink" title="设置字体大小"></a>设置字体大小</h5><pre><code>font-size:larger; font-size:smaller;font-size:length;font-size:30px;</code></pre><h5 id="设置字体类型"><a href="#设置字体类型" class="headerlink" title="设置字体类型"></a>设置字体类型</h5><pre><code>font-family:微软雅黑font-family:华文彩云font-family:宋体</code></pre><h5 id="设置行高"><a href="#设置行高" class="headerlink" title="设置行高"></a>设置行高</h5><pre><code>line-height:30px //设置行高为30像素 </code></pre><h4 id="设置复合属性"><a href="#设置复合属性" class="headerlink" title="设置复合属性"></a>设置复合属性</h4><pre><code>font:font-style font-variant font-weight font-zize font-family</code></pre><h4 id="设置首行缩进和字符间距"><a href="#设置首行缩进和字符间距" class="headerlink" title="设置首行缩进和字符间距"></a>设置首行缩进和字符间距</h4><pre><code>text-indent:2em ;//设置两个字符的首行缩进letter-space:5px ;//设置字符间距</code></pre><h4 id="设置对齐方式"><a href="#设置对齐方式" class="headerlink" title="设置对齐方式"></a>设置对齐方式</h4><pre><code>text-align:left;text-align:right;text-align:center;text-align:justfy; //两端对齐</code></pre><h4 id="设置竖直对齐方式"><a href="#设置竖直对齐方式" class="headerlink" title="设置竖直对齐方式"></a>设置竖直对齐方式</h4><pre><code>vretical-align:topvertical-align:middlevertical-align:bottom </code></pre><h4 id="设置服务器字体"><a href="#设置服务器字体" class="headerlink" title="设置服务器字体"></a>设置服务器字体</h4><pre><code>@font-face&#123;font-family:name; /*设置服务器字体的名称*/scr:url(url) format(font-format) /*设置字体路径和字体格式*/&#125;</code></pre><h5 id="美化网页图像"><a href="#美化网页图像" class="headerlink" title="美化网页图像"></a>美化网页图像</h5><h6 id="插入图像"><a href="#插入图像" class="headerlink" title="插入图像"></a>插入图像</h6><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">&lt;img <span class="hljs-attribute">src</span>=<span class="hljs-string">&quot;image.jpg&quot;</span>&gt;<br></code></pre></td></tr></table></figure><p>设置图像路径</p><p>最方便的方法：直接将图片放在与网页文件的统一级目录，插入图片时直接引用图片名称即可</p><p>相对路径：相对与网页文件，在整个目录文件中的位置（./img.jpg)</p><p>绝对路径：相对于计算机文件夹的路径（D:/img.jpg)</p><h6 id="设置图像格式"><a href="#设置图像格式" class="headerlink" title="设置图像格式"></a>设置图像格式</h6><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs awk">&lt;img src=<span class="hljs-string">&quot;image.jpg&quot;</span> width=<span class="hljs-string">&quot;200px&quot;</span> height=<span class="hljs-string">&quot;200px&quot;</span>&gt; <span class="hljs-regexp">//</span>设置图像的宽度为<span class="hljs-number">200</span>px,高度也为<span class="hljs-number">200</span>px<br>.img &#123;<br>border:<span class="hljs-number">10</span>px solid <span class="hljs-comment">#12334;   //设置图像边框</span><br>opcity=<span class="hljs-number">0.5</span>; <span class="hljs-regexp">//</span>设置图像透明度<br>border-radius: <span class="hljs-number">50</span>px; <span class="hljs-regexp">//</span>设置圆角<br>box-shadow:<span class="hljs-number">20</span>px <span class="hljs-number">20</span>px <span class="hljs-comment">#00ff00 //设置图像阴影</span><br>vertical-align:bottom; <span class="hljs-regexp">//</span>设置对齐方式<br>float:left; <span class="hljs-regexp">//</span>设置文字与图片混排方式<br>&#125;<br><br></code></pre></td></tr></table></figure><h6 id="设置背景图片"><a href="#设置背景图片" class="headerlink" title="设置背景图片"></a>设置背景图片</h6><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-selector-tag">body</span>&#123;<br><span class="hljs-attribute">background-color</span>:red; <span class="hljs-comment">//设置背景颜色</span><br><span class="hljs-attribute">background</span>-<span class="hljs-selector-tag">img</span>: img.jpg; <span class="hljs-comment">//设置背景图片</span><br><span class="hljs-attribute">background-repeat</span>:no-repeat; <span class="hljs-comment">//设置图片的平铺方式</span><br><span class="hljs-attribute">background-position</span><span class="hljs-selector-pseudo">:left</span> <span class="hljs-attribute">top</span>; <span class="hljs-comment">//设置图像的位置</span><br>&#125;<br></code></pre></td></tr></table></figure><h5 id="网页美化超链接"><a href="#网页美化超链接" class="headerlink" title="网页美化超链接"></a>网页美化超链接</h5><h1 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h1>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/04/22/%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%ACpython%E5%AE%89%E8%A3%85%E5%8C%85/"/>
+    <url>/2022/04/22/%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%ACpython%E5%AE%89%E8%A3%85%E5%8C%85/</url>
+    
+    <content type="html"><![CDATA[<p>##方法一<br>###第一步 找到想要安装包的python版本的scripts文件夹<br>###第二步 将cmd的路径跳转到该文件夹目录下<br>###第三步 输入安装命令<br>    pip intall </p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220422121618.png"></p><p>##方法二</p><pre><code>pip install -t D:\python3.5(32bit)\Lib\site-packages -i https://pypi.douban.com/simple PyInstaller</code></pre>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/04/22/%E7%94%B5%E8%84%91%E6%9F%A5%E7%9C%8BWIFI%E5%AF%86%E7%A0%81/"/>
+    <url>/2022/04/22/%E7%94%B5%E8%84%91%E6%9F%A5%E7%9C%8BWIFI%E5%AF%86%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>cmd命令行查看法</p><pre><code>netsh wlan show profilesnetsh wlan show profiles WiFi名称 key=clear</code></pre><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220420165342.png"><br>###方法二<br>网络共享中心查看法<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220420165140.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/04/20/WiFi%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/"/>
+    <url>/2022/04/20/WiFi%E5%AF%86%E7%A0%81%E7%A0%B4%E8%A7%A3/</url>
+    
+    <content type="html"><![CDATA[<p>###命令集合<br>        airmon-ng//查看是否有无线网卡<br>        airmon-ng start wlan0//开启无线网口的监听模式<br>        airodump-ng waln0mon //扫描环境中的网络<br>        airodump-ng -c 4 –bssid mac地址 -w hach wlan0mon//抓取握手包<br>        aircrack-ng -a2 -b mac地址 -w 密码字典文件.txt 抓包资源.cap //进行密码破解<br>        aireplay-ng -0 10 -a mac地址 -c 对方端口地址 wlan0mon \踢对方下线</p><p>####查看虚拟机无线网口wlan0<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220430212434.png"></p><p>####开启无线网口得监听功能</p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220430212507.png"></p><p>####查看监听功能得端口wlan0mon<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220430212644.png"></p><p>####扫描附近得网络<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220501160915.png"></p><p>####对要进行得网络进行抓包（抓包成功后得到cap文件）<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220501160747.png"><br>#####无法成功抓包得应对方法（踢对方得下线后重新连接抓包）<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220501162021.png"></p><p>####对抓包进行破解（跑字典））<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220501160538.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/04/17/%E5%A5%87%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86/"/>
+    <url>/2022/04/17/%E5%A5%87%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86/</url>
+    
+    <content type="html"><![CDATA[<h2 id="20220417"><a href="#20220417" class="headerlink" title="20220417"></a>20220417</h2><h3 id="爱情三角论"><a href="#爱情三角论" class="headerlink" title="爱情三角论"></a>爱情三角论</h3><p>美国心理学家斯滕伯格认为爱情由三个基本成分组成：激情，亲密和承诺。激情是爱情中的性欲成分，是情绪上的着迷；亲密是指爱情关系中能够引起的温暖体验；承诺指维持关系的决定期或担保。</p><h3 id="随意后注意"><a href="#随意后注意" class="headerlink" title="随意后注意"></a>随意后注意</h3><p>是注意的一种形式，指有自觉目的但不需要意志努力的注意，即服从当前的活动目的与任务，有能节省意志的努力，因此对长期，持续的任务特别有利，培养随意后注意在于发展活动本身的直接兴趣</p><h3 id="联觉现象"><a href="#联觉现象" class="headerlink" title="联觉现象"></a>联觉现象</h3><p>即对一种感官的刺激作用触发另外一种感觉现象。例红，橙，黄会使人感到温暖，蓝，青，绿使人感觉寒冷</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>统计学图表制作</title>
+    <link href="/2022/03/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%9B%BE%E8%A1%A8%E5%88%B6%E4%BD%9C/"/>
+    <url>/2022/03/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%9B%BE%E8%A1%A8%E5%88%B6%E4%BD%9C/</url>
+    
+    <content type="html"><![CDATA[<h1 id="excel制作帕累托图"><a href="#excel制作帕累托图" class="headerlink" title="excel制作帕累托图"></a>excel制作帕累托图</h1><h3 id="第一步：将图表数据输入到excel中"><a href="#第一步：将图表数据输入到excel中" class="headerlink" title="第一步：将图表数据输入到excel中"></a>第一步：将图表数据输入到excel中</h3><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220313103756.png"></p><h3 id="第二步-：将数据按照数目排降序"><a href="#第二步-：将数据按照数目排降序" class="headerlink" title="第二步 ：将数据按照数目排降序"></a>第二步 ：将数据按照数目排降序</h3><p>选中表的所有数据，然后右键，找到排序，然后是自定义排序，点击在自定义排序，选择关键字为数目，次序为降序，然后点击确实<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220313104318.png"></p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220313104524.png"></p><hr><h3 id="第三步-计算累计频次"><a href="#第三步-计算累计频次" class="headerlink" title="第三步 计算累计频次"></a>第三步 计算累计频次</h3><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220313104821.png"></p><p>注意：按照公式计算完前两行后，下拉即可计算余下的行</p><h3 id="第四步：画折线图"><a href="#第四步：画折线图" class="headerlink" title="第四步：画折线图"></a>第四步：画折线图</h3><p>选择所有数据，点击右下角的图标的小图标，选择图表，然后选择更多图表，找到折现图，然后点击确定<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220313105124.png"><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220313105159.png"></p><h3 id="第五步：更改系类图表类型"><a href="#第五步：更改系类图表类型" class="headerlink" title="第五步：更改系类图表类型"></a>第五步：更改系类图表类型</h3><p>选择数目的那根折线，然后右键选择更改系列图表类型，将数目的图表类型选择为簇状柱形图，将累计数目勾选为次坐标轴<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220313105842.png"></p><p>点击确定即可完成</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>痞老板的摄影博客</title>
+    <link href="/2022/03/11/%E7%97%9E%E8%80%81%E6%9D%BF%E7%9A%84%E6%91%84%E5%BD%B1%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2022/03/11/%E7%97%9E%E8%80%81%E6%9D%BF%E7%9A%84%E6%91%84%E5%BD%B1%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="摄影博客地址"><a href="#摄影博客地址" class="headerlink" title="摄影博客地址"></a>摄影博客地址</h1><h1 id="https-gbs-enjoy-life-mysxl-cn"><a href="#https-gbs-enjoy-life-mysxl-cn" class="headerlink" title="https://gbs-enjoy-life.mysxl.cn/"></a><a href="https://gbs-enjoy-life.mysxl.cn/">https://gbs-enjoy-life.mysxl.cn/</a></h1>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>JAVA</title>
+    <link href="/2022/03/10/JAVA/"/>
+    <url>/2022/03/10/JAVA/</url>
+    
+    <content type="html"><![CDATA[<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="Substring"><a href="#Substring" class="headerlink" title="Substring"></a>Substring</h3><pre><code>String substr =str.substring(2,7) //返回字符串str中位置在二到七的子字符串</code></pre>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>爬取豆瓣读书实列</title>
+    <link href="/2022/03/01/%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6%E5%AE%9E%E5%88%97/"/>
+    <url>/2022/03/01/%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6%E5%AE%9E%E5%88%97/</url>
+    
+    <content type="html"><![CDATA[<h2 id="以绘画类图书为例"><a href="#以绘画类图书为例" class="headerlink" title="以绘画类图书为例"></a>以绘画类图书为例</h2><p><a href="https://book.douban.com/tag/%E7%94%B5%E5%BD%B1">https://book.douban.com/tag/%E7%94%B5%E5%BD%B1</a></p><h3 id="第一步-导人requests库"><a href="#第一步-导人requests库" class="headerlink" title="第一步 导人requests库"></a>第一步 导人requests库</h3><pre><code>import requests</code></pre><h3 id="第二步-模拟浏览器的请求头"><a href="#第二步-模拟浏览器的请求头" class="headerlink" title="第二步 模拟浏览器的请求头"></a>第二步 模拟浏览器的请求头</h3><pre><code>headers=&#123;&#39;user-agent&#39;:&#39;Mozilla/5.0&#39;&#125;</code></pre><h3 id="第三部-与链接建立链接"><a href="#第三部-与链接建立链接" class="headerlink" title="第三部 与链接建立链接"></a>第三部 与链接建立链接</h3><pre><code>r = requests.get(url,headers=headers)</code></pre><h3 id="打印爬取页面的内容"><a href="#打印爬取页面的内容" class="headerlink" title="打印爬取页面的内容"></a>打印爬取页面的内容</h3><pre><code>print(r.text)</code></pre><h3 id="使用浏览器插件xpath-helper获取提取信息位置"><a href="#使用浏览器插件xpath-helper获取提取信息位置" class="headerlink" title="使用浏览器插件xpath helper获取提取信息位置"></a>使用浏览器插件xpath helper获取提取信息位置</h3><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220302172400.png"></p><h3 id="解析html页面"><a href="#解析html页面" class="headerlink" title="解析html页面"></a>解析html页面</h3><pre><code>from lxml import etrees=etree.HTML(r.text)s.xpath(&#39;//h2/a&#39;)</code></pre><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303192349.png"></p><h3 id="显示提取关键字内容"><a href="#显示提取关键字内容" class="headerlink" title="显示提取关键字内容"></a>显示提取关键字内容</h3><pre><code>for elem in s.path(&#39;//path/a&#39;):    print(elem.text.strip())</code></pre><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303192441.png"><br>函数strip： <a href="https://www.runoob.com/python/att-string-strip.html">https://www.runoob.com/python/att-string-strip.html</a></p><h3 id="遍历打印所有的文本内容地址"><a href="#遍历打印所有的文本内容地址" class="headerlink" title="遍历打印所有的文本内容地址"></a>遍历打印所有的文本内容地址</h3><pre><code>for elem in s.xpath(&#39;//h2/a&#39;):    print(elem.itertext())</code></pre><p>*函数itertext:从元素中提取文本，剥离标签<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303193129.png"></p><h3 id="连接文本，去掉空格和换行符"><a href="#连接文本，去掉空格和换行符" class="headerlink" title="连接文本，去掉空格和换行符"></a>连接文本，去掉空格和换行符</h3><pre><code>for elem in s.xpath(&#39;//h2/a&#39;):    print(&#39;&#39;.join(elem.itertext()).replace(&#39; &#39;,&#39;&#39;)/replace(&#39;\n&#39;,&#39;&#39;))</code></pre><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303193611.png"></p><h3 id="自动翻页爬取"><a href="#自动翻页爬取" class="headerlink" title="自动翻页爬取"></a>自动翻页爬取</h3><p><strong>方法一</strong><br>经过观察发现，当实现翻页时，各个页面的url出现了规律性的变化，  真个链接只有start后面的数字在发生变法，我们就通过函数来实现按该链接的规律性变化，然后实现翻页<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220308213655.png"><br><strong>方法二</strong><br>可以利用当前页面中存在下一页的按钮进行翻页，将下一页按钮的链接拼接到豆瓣主页后面，形成新的下一页链接<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220308214223.png"></p><h1 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h1><p>在主板块下，抓取对应子板块内容，需要在xpath路径前加上一点。<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220306100804.png"></p><hr><h3 id="保存爬取内容到本地"><a href="#保存爬取内容到本地" class="headerlink" title="保存爬取内容到本地"></a>保存爬取内容到本地</h3><p>使用with open 函数对csv文件进行读写，将book_info的数据列表写入文件中，writerows多行写入<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220308220356.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>HTML</title>
+    <link href="/2022/02/24/HTML/"/>
+    <url>/2022/02/24/HTML/</url>
+    
+    <content type="html"><![CDATA[<h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><pre><code>&lt;!--zuThis is a comment--&gt;</code></pre>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/02/22/%E5%9B%BE%E5%BA%8A/"/>
+    <url>/2022/02/22/%E5%9B%BE%E5%BA%8A/</url>
+    
+    <content type="html"><![CDATA[<h2 id="什么是图床"><a href="#什么是图床" class="headerlink" title="什么是图床"></a>什么是图床</h2><p>单独存储图片的服务器</p><h2 id="图床的搭建-gitee-PicGo"><a href="#图床的搭建-gitee-PicGo" class="headerlink" title="图床的搭建(gitee+PicGo)"></a>图床的搭建(gitee+PicGo)</h2><p>1.建立仓库<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93.png"></p><p>2.下载PicGO <a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/Picgo.png"></p><p>注意：需要根据自己电脑选择对应版本的安装包。<br>例如window64位系统<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220222193502.png"></p><p>3.执行安装包，直接选择下一步</p><p>4.配置<br>在插件设置中安装gitte 和gitee uploader</p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220222194336.png"></p><p>安装完成后重启软件，然后点击到图床设计那一栏，再选Gitee图床</p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/%E9%85%8D%E7%BD%AE.png"></p><p>ower:填写自己的gitee账户的空间地址（只要求后面部分）<br>repo:填写自己的仓库名<br>token：自己的gitee仓库私人令牌（需要自己操作生成）<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220222200022.png"></p><p>其他的可以不用填，然后点击将其设为默认配置</p><p>5.上传传图片测试<br>点击上传，上传完成后，图片会出现在相册中</p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220222201244.png"></p><h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>2022/2/22</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>new article</title>
+    <link href="/2022/02/18/new-article/"/>
+    <url>/2022/02/18/new-article/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>安装</title>
+    <link href="/2022/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E7%94%A8%E8%AE%BE%E7%BD%AE%E4%BD%8D%E7%BD%AE/"/>
+    <url>/2022/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B8%B8%E7%94%A8%E8%AE%BE%E7%BD%AE%E4%BD%8D%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>计算机操作系统</title>
+    <link href="/2022/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <url>/2022/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
+    
+    <content type="html"><![CDATA[<p>#第一章</p><h3 id="操作系统的作用"><a href="#操作系统的作用" class="headerlink" title="操作系统的作用"></a>操作系统的作用</h3><ul><li>作为用户与计算机硬件系统之间的接口。</li><li>作为计算机资源的管理器</li><li>实现对计算机资源的抽象<h3 id="推动计算机系统发展的主要动力"><a href="#推动计算机系统发展的主要动力" class="headerlink" title="推动计算机系统发展的主要动力"></a>推动计算机系统发展的主要动力</h3></li><li>不断提高计算机资源的利用率</li><li>方便用户</li><li>硬件的不断更新迭代</li><li>计算机结构的不断发展</li><li>不断有新的应用需求<h3 id="计算机系统的发展路程"><a href="#计算机系统的发展路程" class="headerlink" title="计算机系统的发展路程"></a>计算机系统的发展路程</h3>未配置的操作系统——》单通道批处理系统——》多通道批处理系统——》分时系统——》实时系统——》微分操作系统</li></ul><h3 id="操作系统的基本特征"><a href="#操作系统的基本特征" class="headerlink" title="操作系统的基本特征"></a>操作系统的基本特征</h3><ul><li>并发</li><li>共享</li><li>虚拟</li><li>异步</li></ul><h3 id="操作系统的主要功能"><a href="#操作系统的主要功能" class="headerlink" title="操作系统的主要功能"></a>操作系统的主要功能</h3><ul><li>处理机管理</li><li>存储器管理</li><li>设备管理</li><li>文件管理</li><li>操作系统与用户之间的接口</li><li>发展操作系统的新功能<h3 id="os结构设计"><a href="#os结构设计" class="headerlink" title="os结构设计"></a>os结构设计</h3></li><li>C/S（客户/服务器模式)组成<ul><li>1.客服机 2.服务器 3.网络系统 </li></ul></li><li>客户/服务器之间的交付<ul><li>客服发送请求消息</li><li>服务器接受消息</li><li>服务器回送消息</li><li>客户机接受消息</li></ul></li><li>客户/服务器的优点<ul><li>数据的分布存储和处理</li><li>便于集中管理</li><li>灵活性和可扩充性</li><li>易于改变应用软件</li></ul></li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>python网络爬虫</title>
+    <link href="/2022/02/18/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/"/>
+    <url>/2022/02/18/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/</url>
+    
+    <content type="html"><![CDATA[<h3 id="爬虫介绍"><a href="#爬虫介绍" class="headerlink" title="爬虫介绍"></a>爬虫介绍</h3><pre><code>*</code></pre><h3 id="万物皆可API"><a href="#万物皆可API" class="headerlink" title="万物皆可API"></a>万物皆可API</h3><p>API:程序之间的接口</p><h3 id="编程环境安装"><a href="#编程环境安装" class="headerlink" title="编程环境安装"></a>编程环境安装</h3><pre><code>requests库的安装：以管理员权限打开管理员控制台（cmd)然后输入命令 pip install requests</code></pre><h4 id="测试requests库是否安装成功"><a href="#测试requests库是否安装成功" class="headerlink" title="测试requests库是否安装成功"></a>测试requests库是否安装成功</h4><pre><code>打开python的ide输入以下命令：    import requets    r = requests.get(&quot;http://www.baidu.com&quot;)    print(r.status_code)然后运行命令，显示200，则表示requests库安装成功</code></pre><h4 id="requests库的主要方法"><a href="#requests库的主要方法" class="headerlink" title="requests库的主要方法"></a>requests库的主要方法</h4><pre><code>requests.get(url):含有浏览器返回的所有信息    r=requests.get(url)    r.status_code //返回状态，200表述连接成功，404表述连接失败    r.text //返回url对应的页面内容    r.encoding 返回响应内编码方式    r.apparent_encoding 从内容这分出析响应的编码方式    r.content 以二进制返回网页内容    r.raise_for_status() 异常处理，如果状态不是200则会引发异常requests.head()requests.post()requests.put()requests.patch()requests.delete()requests.request(method,url,**kwargs)method:get,post,put,patch,delete**kwarges:传输数据</code></pre><h3 id="网页爬取通用框架"><a href="#网页爬取通用框架" class="headerlink" title="网页爬取通用框架"></a>网页爬取通用框架</h3><pre><code>import requeststry: r=requests.request(get,url,timeout=30) r.raise_for_status() r.encoding=r.apprent_encoding  return r.textexcept:    return &quot;error&quot;</code></pre><h3 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h3><p>超文本传输协议<br>提取服务器信息：get head<br>更新服务器操作： post put(覆盖原有信息) patch（更新局部信息）<br>delete.<br>详见：<a href="https://www.runoob.com/http/http-status-codes.html">https://www.runoob.com/http/http-status-codes.html</a></p><h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>是一种存储在用户本地终端的加密数据<br>作用：辨别用户身份</p><h3 id="robots协议"><a href="#robots协议" class="headerlink" title="robots协议"></a>robots协议</h3><p>用于网络爬虫排除标准<br>告知所有的网络爬虫爬取资源的权限</p><h3 id="模拟浏览器向服务器发送请求（规避浏览器来源审查）"><a href="#模拟浏览器向服务器发送请求（规避浏览器来源审查）" class="headerlink" title="模拟浏览器向服务器发送请求（规避浏览器来源审查）"></a>模拟浏览器向服务器发送请求（规避浏览器来源审查）</h3><h4 id="查看我们发给服务器的headers"><a href="#查看我们发给服务器的headers" class="headerlink" title="查看我们发给服务器的headers"></a>查看我们发给服务器的headers</h4><pre><code>r.request.headers</code></pre><p>1.构造我们要模拟浏览器的headers键值对.  </p><pre><code>kv = &#123;&#39;user-agent&#39;:&#39;Mozilla/5.0&#39;&#125;</code></pre><p>2.修改headers的user-agent字段</p><pre><code>r =requests.get(url,headers=kv&#125;</code></pre><h3 id="关键字提交"><a href="#关键字提交" class="headerlink" title="关键字提交"></a>关键字提交</h3><pre><code>kv=&#123;:&#125;r=requsts.get(url,params=kv)</code></pre><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="保存文件"><a href="#保存文件" class="headerlink" title="保存文件"></a>保存文件</h2><pre><code>with open(path,&#39;wb&#39;) as ff.write(r.content)f.cloce</code></pre><h2 id="BeautifulSoup"><a href="#BeautifulSoup" class="headerlink" title="BeautifulSoup"></a>BeautifulSoup</h2><h4 id="beautifulsoup的安装"><a href="#beautifulsoup的安装" class="headerlink" title="beautifulsoup的安装"></a>beautifulsoup的安装</h4><p>以管理员权限打开cmd ，然后输入一下命令</p><pre><code>pip install beautifulsoup4</code></pre><h4 id="beatifulsoup的使用"><a href="#beatifulsoup的使用" class="headerlink" title="beatifulsoup的使用"></a>beatifulsoup的使用</h4><p>导入beautifulsoup库</p><pre><code>from bs4 import BeautifulSoup</code></pre><p>对页面内容进行解析</p><pre><code>demo=r.textsoup=BeautifulSoup(demo,&#39;html.parser&#39;)</code></pre><p>prettify的使用</p><pre><code>soup.prettiy()//为html文本增加换行符，分行显示</code></pre><p>其中html.parser为html页面的解析器，还可以为lxml,xml,html5lib</p><p>获取html页面对应标签的内容</p><pre><code>soup.asoup.a.string//返回a标签中的字符串类容soup.divsoup.body</code></pre><p>获取对应标签的名字</p><pre><code>soup.a.namesoup.parent.name</code></pre><p>查看标签的属性</p><pre><code>tag=soup.atag.attrs//获取整个标签属性字典tag.attrs[&#39;class&#39;]//查看标签a的类名tag.attrs[&#39;id&#39;]tag.attrs[&#39;herf&#39;]//查看标签中的链接</code></pre><p>查看子节点</p><pre><code>soup.body.contents//查看body中所有儿子节点，将所有的儿子节点存入列表中soup.body.children //循环遍历所有的儿子节点soup.descendants  //用于遍历所有子孙节点</code></pre><p>查看父亲节点</p><pre><code>soup.body.parentsoup.body.parents//用于遍历所有先辈节点</code></pre><p>查看平行标签</p><p>查看平行标签的下一个标签</p><pre><code>soup.a.next_sibling//查看a标签的下一个标签</code></pre><p>查看平行标签的上一个标签</p><pre><code>soup.a.previous_sibing//查看a标签的上一个标签</code></pre><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220224220339.png"></p><h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><h2 id="信息标记的三种方式"><a href="#信息标记的三种方式" class="headerlink" title="信息标记的三种方式"></a>信息标记的三种方式</h2><h3 id="xml（与html相似）"><a href="#xml（与html相似）" class="headerlink" title="xml（与html相似）"></a>xml（与html相似）</h3><p>主要用来internet上的信息交互与传递</p><h3 id="jason-键值对-含有双引号）"><a href="#jason-键值对-含有双引号）" class="headerlink" title="jason(键值对,含有双引号）"></a>jason(键值对,含有双引号）</h3><p>主要应用于云端和节点的信息通信<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228201941.png"><br>可以在键值对中嵌套键值对</p><h3 id="Yaml-键值对形式，但无双引号）"><a href="#Yaml-键值对形式，但无双引号）" class="headerlink" title="Yaml(键值对形式，但无双引号）"></a>Yaml(键值对形式，但无双引号）</h3><p>各类系统的配置文件<br>利用缩进来表示所属关系<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202037.png"><br>利用减号表述所属关系<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202201.png"><br>用竖线表示整块数据<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202330.png"></p><h2 id="信息提取的一般方法"><a href="#信息提取的一般方法" class="headerlink" title="信息提取的一般方法"></a>信息提取的一般方法</h2><h3 id="形式解析与搜索方法"><a href="#形式解析与搜索方法" class="headerlink" title="形式解析与搜索方法"></a>形式解析与搜索方法</h3><h4 id="方法find-all的使用"><a href="#方法find-all的使用" class="headerlink" title="方法find_all的使用"></a>方法find_all的使用</h4><pre><code>soup.find_all(&#39;a&#39;)//查找所有的a标签,默认查找所有的子孙soup.find_all(&#39;a&#39;，recursive=false)//查找所有的a标签,查找子节点soup.find_all(&#39;a&#39;,&#39;b&#39;)//查找a和b标签for tag in soup.find_all(True):    print(tag.name)//查看html页面的所有内容for tag in soup.find_all(re.compile(&#39;b&#39;)):    print(tag.name)//查看html页面的所有以b开头的内容sou.find_all(&#39;a&#39;,&#39;student&#39;)//查找a标签中包含student属性的标签soup.find_all(id=&#39;link1&#39;) //查看标签中属性包含id=&#39;link1&#39;soup.find_all(string =re.compile (&quot;python&quot;))//检索所有包含字符串python的字符串</code></pre><h2 id="正则表达式（表示了一组字符串的特征或模式）"><a href="#正则表达式（表示了一组字符串的特征或模式）" class="headerlink" title="正则表达式（表示了一组字符串的特征或模式）"></a>正则表达式（表示了一组字符串的特征或模式）</h2><h3 id="导入正则表达式库"><a href="#导入正则表达式库" class="headerlink" title="导入正则表达式库"></a>导入正则表达式库</h3><pre><code>import re</code></pre><h3 id="常用正则"><a href="#常用正则" class="headerlink" title="常用正则"></a>常用正则</h3><pre><code>py+//匹配以p开头且后面有一个或无穷多个y的字符串</code></pre><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195658.png"></p><h3 id="常用操作符"><a href="#常用操作符" class="headerlink" title="常用操作符"></a>常用操作符</h3><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195430.png"><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195518.png"></p><pre><code>re.sub(pattern,repl,string)//将string中符合pattern的字符串使用repl进行替换re.finiditer(pattern,string) //将匹配到的字符串整成一个可以循环的列表，使用for循环可以取出其中的元素re.compile(pattern) 将正则表达式的字符串形式编译成正则表达式对象martch.group(0) //获得匹配后的字符串martch.start() //获取匹配到的开始位置martch.end() //匹配的结束位置marth.spand() //匹配文本的开始与结束martch.string //待匹配的文本martch.re //获取匹配的正则表达式martch.pos //获取开始匹配的位置martch.endpos //获取结束匹配的位置</code></pre><h4 id="面向对象re库用法"><a href="#面向对象re库用法" class="headerlink" title="面向对象re库用法"></a>面向对象re库用法</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310201212.png"><br>经过一次编译，以后都可以直接使用，以此加快程序的运行    </p><p>###re函数的主要功能</p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310195121.png"></p><h3 id="re库的贪婪匹配和最小匹配"><a href="#re库的贪婪匹配和最小匹配" class="headerlink" title="re库的贪婪匹配和最小匹配"></a>re库的贪婪匹配和最小匹配</h3><p>re库默认的是贪婪匹配，返回匹配到的最长的字符串<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310203514.png"></p><hr><h2 id="lxml库"><a href="#lxml库" class="headerlink" title="lxml库"></a>lxml库</h2><p>官方文档 <a href="https://www.w3cschool.cn/lxml/">https://www.w3cschool.cn/lxml/</a></p><h3 id="Scapy爬虫框架-5-2）"><a href="#Scapy爬虫框架-5-2）" class="headerlink" title="Scapy爬虫框架(5+2）"></a>Scapy爬虫框架(5+2）</h3><h4 id="Scrapy的安装"><a href="#Scrapy的安装" class="headerlink" title="Scrapy的安装"></a>Scrapy的安装</h4><pre><code>pip install Scrapy</code></pre><h4 id="Scrapy的框架"><a href="#Scrapy的框架" class="headerlink" title="Scrapy的框架"></a>Scrapy的框架</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220316195813.png"></p><p>Spider</p><ul><li>解析Downloader返回的响应(Response)</li><li>产生爬取项(scraped item)</li><li>产生额外的爬取请求（Requests)</li></ul><p>Engine </p><ul><li>控制所有模块之间的数据流</li><li>根据条件触发事件</li><li>不需要用户修改</li></ul><p>DownLoader</p><ul><li>根据请求下载网页</li><li>不需要用户修改</li></ul><p>Scheduler </p><ul><li>不需要用户修改</li><li>对所有请求进行调度管理</li></ul><h4 id="Scapy常用命令"><a href="#Scapy常用命令" class="headerlink" title="Scapy常用命令"></a>Scapy常用命令</h4><p>格式：scrapy command options args</p><pre><code>scrapy startprojects name dir /创建一个工程scrapy genspider name domain //创建一个爬虫scrapy seting options //获取爬虫的配置信息scrapy crawl spider //运行一个爬虫scrapy list // 列出工程中所有的爬虫scrapy shell url //启动URL调试命令行</code></pre><h4 id="Scrapy基础"><a href="#Scrapy基础" class="headerlink" title="Scrapy基础"></a>Scrapy基础</h4><p>#####第一步：创建scrapy项目</p><p>在自己创建存储项目的文件夹内，按住shift然后右键，选择打开powershell 命令台，前面的两个单词是创建项目固定的，最后一个单词是项目名称</p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317211436.png"><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212010.png"></p><pre><code>scrapy startproject python123demo</code></pre><p>#####第二步：产生demo.py<br>继续在命令台上输入 scrapy genspider python123.io ,前两个单词固定，后面是爬取页面的原始地址，这个可以在创建demo后，修改爬取网页的地址<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212221.png"><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212043.png"></p><p>#####第三步：修改demo</p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213550.png"></p><p>#####第四步：运行爬虫<br>继续在命令台输入 scrapy crawl demo<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212523.png"></p><p>#####结果：<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213244.png"></p><h4 id="yield生成器"><a href="#yield生成器" class="headerlink" title="yield生成器"></a>yield生成器</h4><ul><li>生成器是一个不断产生值的函数</li><li>包含yild语句的函数是一个生成器</li><li>生成器每次产生一个值（yield语句），函数被冻结，被唤醒后在产生一个值，唤醒后还是从上一个执行的位置开始执行</li><li>经常与循环搭配使用<h4 id="使用实列"><a href="#使用实列" class="headerlink" title="使用实列"></a>使用实列</h4>  def gen(n):<pre><code>  for i in range(n):      yield i**2</code></pre>  for i in gen(5):<pre><code>      print(i,&quot;&quot;,end=&quot;&quot;)</code></pre>  结果： 0 1 4 9 16</li></ul><p>#####生成器的优点（相比与普通的列表返回方法）</p><ul><li>更快的响应速度</li><li>更节省存储空间（每次只需要一个存储空间）</li><li>使用更加灵活</li></ul><h4 id="爬虫的生成器写法"><a href="#爬虫的生成器写法" class="headerlink" title="爬虫的生成器写法"></a>爬虫的生成器写法</h4><pre><code>for url in start_urls:        yield scrapy.Request(url=url,callback=self.parse)</code></pre><h4 id="scrapy爬虫的使用步骤"><a href="#scrapy爬虫的使用步骤" class="headerlink" title="scrapy爬虫的使用步骤"></a>scrapy爬虫的使用步骤</h4><p>步骤一：创建一个工程和spider模板<br>步奏二:编写spider<br>步骤三： 编写item pipecline<br>步骤四： 优化配置策略</p><h5 id="Scrapy爬虫的数据类型"><a href="#Scrapy爬虫的数据类型" class="headerlink" title="Scrapy爬虫的数据类型"></a>Scrapy爬虫的数据类型</h5><p>Ruests类 </p><pre><code>class scrapy.http.Request()</code></pre><table><thead><tr><th>.url</th><th>.method</th><th>.headers</th><th>.body</th><th>.meta</th><th>.copy</th></tr></thead><tbody><tr><td>requests对应请求的位置</td><td>对应的请求方法</td><td>字典类型的请求头</td><td>内容的主体</td><td>用户添加的拓展信息</td><td>复制该请求</td></tr></tbody></table><p>Response类  </p><pre><code>class scrapy.http.Response()</code></pre><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220321212306.png"></p><p>Item类 </p><pre><code> class scrapy.http.Response()</code></pre><h5 id="Css-selector"><a href="#Css-selector" class="headerlink" title="Css-selector"></a>Css-selector</h5><pre><code>&lt;HTML&gt;.CSS(&#39;a::attr(herf)&#39;).extract()</code></pre>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数据可视化</title>
+    <link href="/2022/02/18/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <url>/2022/02/18/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</url>
+    
+    <content type="html"><![CDATA[<h2 id="数据分析软件"><a href="#数据分析软件" class="headerlink" title="数据分析软件"></a>数据分析软件</h2><h3 id="python的安装"><a href="#python的安装" class="headerlink" title="python的安装"></a>python的安装</h3><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>在官方网站下载 <a href="https://www.python.org/">https://www.python.org/</a></p><p>  <img src="/imgs/python.png" alt="avatar"></p><h4 id="第二步：点击exe执行安装"><a href="#第二步：点击exe执行安装" class="headerlink" title="第二步：点击exe执行安装"></a>第二步：点击exe执行安装</h4><p>注意将下面连个选项勾上<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220314215708.png"></p><p>手动配置环境变量</p><p>1.打开系统高级设置<br>桌面上找到我的电脑图标，然后右键，选择属性，然后找到系统高级设置<br>，选择高级，然后点击右下方的环境变量<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220314220229.png"><br>2，找到系统变量下的path<br>双击path，点击兴建，然后将python的安装路径添加进去，然后点击确定，<br>一直点确定，记得把最后一个系统属性的确定 也点击了，这样你添加的环境变量才会生效<br><a href="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220314221307.png">https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220314221307.png</a></p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220314220554.png"></p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220314221015.png"><br>3.验证 是否安装成功</p><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220314221307.png"></p><hr><p><strong>寻找python安装路径：在电脑的文件夹中搜索pip.exe,打开搜索到的文件位置，将文件路径复制即可</strong><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220314223132.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>面向对象</title>
+    <link href="/2021/12/06/Virtuebox/"/>
+    <url>/2021/12/06/Virtuebox/</url>
+    
+    <content type="html"><![CDATA[<h3 id="共享文件夹配置方法"><a href="#共享文件夹配置方法" class="headerlink" title="共享文件夹配置方法"></a>共享文件夹配置方法</h3><p><a href="https://blog.csdn.net/2004v2004/article/details/108102119">https://blog.csdn.net/2004v2004/article/details/108102119</a></p><h3 id="看不到上方工具栏"><a href="#看不到上方工具栏" class="headerlink" title="看不到上方工具栏"></a>看不到上方工具栏</h3><p>方法：ctrl+alt+c</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>面向对象</title>
+    <link href="/2021/12/06/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <url>/2021/12/06/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
+    
+    <content type="html"><![CDATA[<p>Day1<br>关键字：类，多态，实例, 继承. </p><p>类：包含实例和方法的集合 </p><p>多态：抽象方法</p><p>实例：赋予方法的主体</p><p>继承：后面的类具有与前面的类相似的属性和方法</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2021/10/24/%E5%AD%A6%E7%94%9F%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <url>/2021/10/24/%E5%AD%A6%E7%94%9F%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</url>
+    
+    <content type="html"><![CDATA[<p>import tkinter as tk<br>windows=tk.Tk()</p><p>windows.title=(‘学生用户管理系统’)<br>windows.geometry(‘800x400’)<br>l=tk.lable(windows,text=’hello world’,bg=’green’,font=(‘Apial’,12),width=15,height=15)<br>l.pack()<br>window.mainlop()</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>网络安全学习路线</title>
+    <link href="/2021/07/03/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+    <url>/2021/07/03/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</url>
+    
+    <content type="html"><![CDATA[<p>一：百思莫解之菜鸟篇<br> 对于刚接触网络安全的门外汉，无论是自学还是上课都有一个大前提，就是读大量的书，掌握安全基本知识。因为网络安全设计的知识面很广，术语多，理论知识多，需要我们投入时间和精力来学习，掌握网络安全的基本知识，安全的概念和定义，常见的安全标准等。<br> 推荐书：《CIW：安全专家全息教程》 《计算机系统安全》 《计算机网络安全导论》 《winsock网络编程经络》<br> 二：毛塞顿开小白篇<br>  掌握了必要的理论，就开始开展技能方面的学习了，具体的技能与之前的理论结合起来，你会有毛晒顿开的感觉，这部分的学习主要包括：解密与加密，协议层安全。<br>  解密与加密<br>  软件的加密与解密是一个的研究领域，他几乎可以与任意一种计算机技术紧密结合————密码学，程序设计语言，操作系统，数据结构哦。没有技术，任何网络安全都是一纸空谈，加密学的应用贯穿整个网络安全学习的过程中。<br>  先了解一下计算机的程序，高级语言编写的程序，会汇编成机器语言在CpU中执行，如VisualC++等。由于机器语言与汇编语言是一一对应，而汇编语言转化成汇编语言，这样个过程称之为反汇编。而汇编语言可能读性是比较好，这样就可分析程序流程，解析其功能了，这个过程称就是解密（俗称破解）。也就是说，解密的基础是建立在汇编语言级别上的，因此想涉足这一领域的朋友，汇编语言一定的学好。等汇编语言学好了，建议在掌握Win32编程。<br>  学习解密与加密是很累的，需要花费大量的时间，而且会经常碰壁，三天两天的毫无进展是极为平常的事情。除了勤奋加执着，没有背的秘诀和可言，但但掌握这方面可以通过跟踪软件，提高自己的调试技能，了解他人编程思路，写出更好的程序<br>  推荐书：《windows程序设计》 《Windows环境下32位汇编语言设计》 《密码学》 《密码工程实践指南》 《密码学引导》 《Window95系统程式设计大奥秘？ 《Windows高级编程指南》 《Windows200编程技术内幕》 《win32系统编程-Winows 2000应用程序开发指南》<br>  协议层安全<br>  协议层安全主要涉及和Tcp/ip分层模型有关的内容，包括常见协议的工作原理和特点，缺陷，保护或替代措施等等。系统学习TCP/IP反面的知识有很多原因。要适当的实施防火墙过滤，安全管理员必须对于TCp/ip的IP层和Tcp/udp层有很深的见解，黑客经常使用TCP/IP堆栈中的一部分或破坏网络安全等。所以你也必须清楚的了解这些内容。<br>  推荐书: 《Tcp/Ip详解 卷一：协议》 《用TCp/ip进行网络互联第一卷原理，协议与结构》<br>  三，驾轻就熟之高手篇<br>  掌握了以上基础知识和技能，你就不是在是网络安全小白了，下一阶段的学习会让你成为网络安全高手，队理论做到触类旁通，对技术做到亲车熟路。高手的技术修炼主要包括两部分：WIndows安全（攻击与防御）和UNix/Linx安全（攻击与防御）<br>  Windows安全（攻击与防御）<br>  因为微软的WIndows操作系统已被广泛应用，所以他们更容易成为攻击的目标</p><p>  对于Windows安全的学习，其实就是对Windows系统攻击与防御技术的学习。windows系统安全的学习内容将包括：用户和组，文件系统，策略，系统魔人值，审计以及操作系统本身漏洞的研究</p><p>参考书：《黑客攻防实战入门》 《黑客大曝光》 《狙击黑客》</p><p>Unix/Linunx安全（攻击与 防御》<br>随着Linux的市占有率越高，LInux系统，服务器也别部署的越来越广泛。Unix/Linux系统的安全问题也越来越凸显出来。作为一个网络安全工作这，LInux安全绝对占有网络安全一半的重要性，但是相对Windows系统，普通用户LInux系统的机会不多。<br>Unix/Linux系统本身的学习也是他们必须恶补的一课。</p><p>四 豁然开朗之达人篇<br>掌握了Windows安全和UNix/Linux安全，你一定迫不及待的像搞定防火墙技术和入侵监测系统（IdS).到了这个阶段，你就会发现网络安全非常的有趣，学习的过程就是满足好奇心的过程，而是完成这一部分的学习后，你就可以成为一名合格的网络安全工程师了。</p><p>防火墙技术<br>防火墙技术原是网络安全的中重要元素，是外网和内网进行通信时的一道屏障，一个屏障，一个哨岗。除了应该深刻理解防火墙技术的种类，工作原理之外，作为一个网络安全的管理人员应该熟悉各种常见防火墙的配置，维护。</p><p>至少应该了解以下防火墙的简单配置：<br>（1） 常见的各种个人防火墙的使用<br>（2） 基于Acl的包过滤防火墙配置（如基于Windows的IPSec配置，基于Cisco路由器的ACl配置等；<br>（3) 基于Linux操作洗系统的防火墙配置（ipchains/iptables）<br>（4） ISA配置<br>（5) CIsco PIX 配置<br>（6） check point 防火墙配置<br>（7）基于WIndows Unix，Cisco路由器的Vpn配置<br>推荐书：《网络安全与防火墙技术》 《Linux 防火墙》 《高级防火墙ISA Sever 2000》 《Cisco 访问表配置指南》 《check point NG 安全管理》<br>《虚拟网络Vpn精解》<br>入侵检测系统（IDS)<br>防火墙不能对所有应用层的数据包进行分析，也会成为网络安全通讯的瓶颈。即便是代理防火墙也不能检查所有应用层的数据包。。<br>入侵检是防火墙的合力补充，它通过收集，分析计算机系统，计算机网络介质的各种有用信息帮助系统管理员发现攻击并进行响应，可以说入侵检测是防火墙之后的第二道安全闸门，在不影响网络性能的情况下能对网络进行检测，从而提供对内部进行攻击，外部攻击和误操作的实时保护。</p><p>到了达人阶段，相信你已经跃跃欲试，想要凭借自己的所学做出点成绩了，但是，理论学习固然重要，但是还是要落实到实践，一个精通理论而不熟悉技巧和产品 的人不可能成为合格的网络安全工程师。</p><p>如果没有机会实践，比较好的方法是多分析成功案例。初入安全行业的工程师不会有太多的案例上手，弥补这块短板的方式就是研究别人成功案列，从案例分析中汲取技术，技能，掌握方案设计思路，熟悉相关产品，尽快提高在高压环境的下的现场解决问题的能力。<br> 另外，推荐两个网络安全和技术的网站：<br> <a href="http://freebuf.com/">http://freebuf.com</a>, <a href="https://pentesterlab.com.这里有最新的网络技术,咨迅,技术分享,也许还能在这里遇到志同道和的人./">https://pentesterlab.com.这里有最新的网络技术，咨迅，技术分享，也许还能在这里遇到志同道和的人。</a></p><p> 网络安全工程师作为技术和市场之间的最佳“纽带”，未来选择的职业很丰富。虽然网络安全工程师的工作及辛苦又难做，但恰恰最锻炼一个人的意志与能力。但如果能够坚持下来，成为白帽黑客指日可待。<br> 最后，当你学习网络安全式遇到瓶颈了该怎末办？借用@tombkeeperTK主教的一段话：<br> 从事任何方向的技术研究，不知道该干什么时，就问自己四个问题：<br> *这个方法最新进展是什么？都知道码？<br> *这个方向最著名的专家又那些？他们的研究都看过吗？<br> *这个方向上最著名的社区有哪些“精华帖都看过吗？<br> *这个方向上最重要，工具有哪些？文章都看过吗？工具都分析过吗？<br> 对于每个重事网络安全的人来说，庞大的网络都如何宇宙般浩瀚无垠，而作为这个联通世界的网络的包卫者，我们心存敬畏<br> 最后，一句话送给立志于网络安全领域的奋斗者们：Do not go gentle into that good night :面对浩瀚的宇宙，没有心里的爱和敬畏，我们就真的太渺小了</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>fox</title>
+    <link href="/2021/07/02/fox/"/>
+    <url>/2021/07/02/fox/</url>
+    
+    <content type="html"><![CDATA[<p>这是我的第一篇文章<br>当我在写这篇文章的时候就已经很高兴了，做这个博客真的很不容易，尽管网上教程很多，但当我实际操作时，就遇到了各种不一样的情况，然后又不得不上网搜索<br>然后在尝试，反复出错，和教程里的就不一样，所以就只有重新来过。经过反复摸索，终于搭建成功，也就是现在你们看到的样子。<br>创建这个博客后，我有了很多的想法，其实就一个中心——“不一样”<br>第一个不一样是，我的博客将不会出很多的教程(网上的教程一搜一大堆)，在以后的分享中，更多的将是我自己的生活心得和经验，可能也会出一点教程，但我最求的教程将会更多的追求细节，且力求简洁，在正真意义上解决看这篇文章的人的问题。<br>。<br>。<br>。<br>。<br>。<br>。<br>。<br>。<br>。<br>。<br>。<br>。<br>。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2021/07/02/hello-world/"/>
+    <url>/2021/07/02/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
