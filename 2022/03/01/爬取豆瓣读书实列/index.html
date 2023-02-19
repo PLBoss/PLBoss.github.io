@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="以绘画类图书为例https://book.douban.com/tag/%E7%94%B5%E5%BD%B1
+第一步 导人requests库import requests
+
+第二步 模拟浏览器的请求头headers=&amp;#123;&amp;#39;user-agent&amp;#39;:&amp;#39;Mozilla/5."/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="爬取豆瓣读书实列"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="以绘画类图书为例https://book.douban.com/tag/%E7%94%B5%E5%BD%B1
+第一步 导人requests库import requests
+
+第二步 模拟浏览器的请求头headers=&amp;#123;&amp;#39;user-agent&amp;#39;:&amp;#39;Mozilla/5."/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Hexo"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="http://example.comimg/home-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="http://example.comimg/home-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>爬取豆瓣读书实列 - Hexo</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-clean-blog">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>爬取豆瓣读书实列</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2022-03-01
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="以绘画类图书为例"><a href="#以绘画类图书为例" class="headerlink" title="以绘画类图书为例"></a>以绘画类图书为例</h2><p><a target="_blank" rel="noopener" href="https://book.douban.com/tag/%E7%94%B5%E5%BD%B1">https://book.douban.com/tag/%E7%94%B5%E5%BD%B1</a></p>
+<h3 id="第一步-导人requests库"><a href="#第一步-导人requests库" class="headerlink" title="第一步 导人requests库"></a>第一步 导人requests库</h3><pre><code>import requests
+</code></pre>
+<h3 id="第二步-模拟浏览器的请求头"><a href="#第二步-模拟浏览器的请求头" class="headerlink" title="第二步 模拟浏览器的请求头"></a>第二步 模拟浏览器的请求头</h3><pre><code>headers=&#123;&#39;user-agent&#39;:&#39;Mozilla/5.0&#39;&#125;
+</code></pre>
+<h3 id="第三部-与链接建立链接"><a href="#第三部-与链接建立链接" class="headerlink" title="第三部 与链接建立链接"></a>第三部 与链接建立链接</h3><pre><code>r = requests.get(url,headers=headers)
+</code></pre>
+<h3 id="打印爬取页面的内容"><a href="#打印爬取页面的内容" class="headerlink" title="打印爬取页面的内容"></a>打印爬取页面的内容</h3><pre><code>print(r.text)
+</code></pre>
+<h3 id="使用浏览器插件xpath-helper获取提取信息位置"><a href="#使用浏览器插件xpath-helper获取提取信息位置" class="headerlink" title="使用浏览器插件xpath helper获取提取信息位置"></a>使用浏览器插件xpath helper获取提取信息位置</h3><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220302172400.png"></p>
+<h3 id="解析html页面"><a href="#解析html页面" class="headerlink" title="解析html页面"></a>解析html页面</h3><pre><code>from lxml import etree
+s=etree.HTML(r.text)
+s.xpath(&#39;//h2/a&#39;)
+</code></pre>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303192349.png"></p>
+<h3 id="显示提取关键字内容"><a href="#显示提取关键字内容" class="headerlink" title="显示提取关键字内容"></a>显示提取关键字内容</h3><pre><code>for elem in s.path(&#39;//path/a&#39;):
+    print(elem.text.strip())
+</code></pre>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303192441.png"><br>函数strip： <a target="_blank" rel="noopener" href="https://www.runoob.com/python/att-string-strip.html">https://www.runoob.com/python/att-string-strip.html</a></p>
+<h3 id="遍历打印所有的文本内容地址"><a href="#遍历打印所有的文本内容地址" class="headerlink" title="遍历打印所有的文本内容地址"></a>遍历打印所有的文本内容地址</h3><pre><code>for elem in s.xpath(&#39;//h2/a&#39;):
+    print(elem.itertext())
+</code></pre>
+<p>*函数itertext:从元素中提取文本，剥离标签<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303193129.png"></p>
+<h3 id="连接文本，去掉空格和换行符"><a href="#连接文本，去掉空格和换行符" class="headerlink" title="连接文本，去掉空格和换行符"></a>连接文本，去掉空格和换行符</h3><pre><code>for elem in s.xpath(&#39;//h2/a&#39;):
+    print(&#39;&#39;.join(elem.itertext()).replace(&#39; &#39;,&#39;&#39;)/replace(&#39;\n&#39;,&#39;&#39;))
+</code></pre>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220303193611.png"></p>
+<h3 id="自动翻页爬取"><a href="#自动翻页爬取" class="headerlink" title="自动翻页爬取"></a>自动翻页爬取</h3><p><strong>方法一</strong><br>经过观察发现，当实现翻页时，各个页面的url出现了规律性的变化，  真个链接只有start后面的数字在发生变法，我们就通过函数来实现按该链接的规律性变化，然后实现翻页<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220308213655.png"><br><strong>方法二</strong><br>可以利用当前页面中存在下一页的按钮进行翻页，将下一页按钮的链接拼接到豆瓣主页后面，形成新的下一页链接<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220308214223.png"></p>
+<h1 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h1><p>在主板块下，抓取对应子板块内容，需要在xpath路径前加上一点。<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220306100804.png"></p>
+<hr>
+<h3 id="保存爬取内容到本地"><a href="#保存爬取内容到本地" class="headerlink" title="保存爬取内容到本地"></a>保存爬取内容到本地</h3><p>使用with open 函数对csv文件进行读写，将book_info的数据列表写入文件中，writerows多行写入<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220308220356.png"></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2023 John Doe<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
