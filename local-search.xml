@@ -4,11 +4,24 @@
   
   
   <entry>
+    <title></title>
+    <link href="/2023/02/21/readme/"/>
+    <url>/2023/02/21/readme/</url>
+    
+    <content type="html"><![CDATA[<p>创建文章一定要使用hexo new 否则将没有标题</p><p>图片的更目录文件夹</p><p><a href="https://github.com/PLBoss/PLBoss.github.io/tree/master/imgs">PLBoss.github.io/imgs at master · PLBoss/PLBoss.github.io</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>zookper的安装</title>
     <link href="/2023/02/21/zookper%E7%9A%84%E5%AE%89%E8%A3%85/"/>
     <url>/2023/02/21/zookper%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     
-    <content type="html"><![CDATA[<h3 id="Zookeer的安装"><a href="#Zookeer的安装" class="headerlink" title="Zookeer的安装"></a>Zookeer的安装</h3><p><a href="https://archive.apache.org/dist/zookeeper/zookeeper-3.5.10/">安装包</a></p><h4 id="下载bin-tar-gz"><a href="#下载bin-tar-gz" class="headerlink" title="下载bin.tar.gz"></a>下载bin.tar.gz</h4><p><img src="../imgs/image-20230211105929123.png" alt="image-20230211105929123"></p><h4 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h4><p><img src="../imgs/image-20230211110006925.png" alt="image-20230211110006925"></p><h4 id="创建data目录和log目录"><a href="#创建data目录和log目录" class="headerlink" title="创建data目录和log目录"></a>创建data目录和log目录</h4><h4 id="复制zoo-sample-cfg，并重命名为zoo-cfg"><a href="#复制zoo-sample-cfg，并重命名为zoo-cfg" class="headerlink" title="复制zoo_sample.cfg，并重命名为zoo.cfg"></a>复制zoo_sample.cfg，并重命名为zoo.cfg</h4><p><img src="../imgs/image-20230211110206550.png" alt="image-20230211110206550"></p><h4 id="修改zoo-cfg"><a href="#修改zoo-cfg" class="headerlink" title="修改zoo.cfg"></a>修改zoo.cfg</h4><p><img src="../imgs/image-20230211110304014.png" alt="image-20230211110304014"></p><p>添加dataDir和dataLogDir,后面的路径就是之前创建的data和log文件夹得路劲</p><h4 id="启动server"><a href="#启动server" class="headerlink" title="启动server"></a>启动server</h4><p><img src="../imgs/image-20230211110549158.png" alt="image-20230211110549158"></p><p><img src="../imgs/image-20230211110516808.png" alt="image-20230211110516808"></p><h4 id="启动clien"><a href="#启动clien" class="headerlink" title="启动clien"></a>启动clien</h4><p><img src="../imgs/image-20230211110530354.png" alt="image-20230211110530354"></p><h3 id="Redis的安装与启动"><a href="#Redis的安装与启动" class="headerlink" title="Redis的安装与启动"></a>Redis的安装与启动</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="Zookeer的安装"><a href="#Zookeer的安装" class="headerlink" title="Zookeer的安装"></a>Zookeer的安装</h3><p><a href="https://archive.apache.org/dist/zookeeper/zookeeper-3.5.10/">安装包</a></p><h4 id="下载bin-tar-gz"><a href="#下载bin-tar-gz" class="headerlink" title="下载bin.tar.gz"></a>下载bin.tar.gz</h4><p><img src="https://github.com/PLBoss/PLBoss.github.io/tree/master/imgs/image-20230211105929123.png" alt="image-20230211105929123"></p><h4 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h4><p><img src="../imgs/image-20230211110006925.png" alt="image-20230211110006925"></p><h4 id="创建data目录和log目录"><a href="#创建data目录和log目录" class="headerlink" title="创建data目录和log目录"></a>创建data目录和log目录</h4><h4 id="复制zoo-sample-cfg，并重命名为zoo-cfg"><a href="#复制zoo-sample-cfg，并重命名为zoo-cfg" class="headerlink" title="复制zoo_sample.cfg，并重命名为zoo.cfg"></a>复制zoo_sample.cfg，并重命名为zoo.cfg</h4><p><img src="../imgs/image-20230211110206550.png" alt="image-20230211110206550"></p><h4 id="修改zoo-cfg"><a href="#修改zoo-cfg" class="headerlink" title="修改zoo.cfg"></a>修改zoo.cfg</h4><p><img src="../imgs/image-20230211110304014.png" alt="image-20230211110304014"></p><p>添加dataDir和dataLogDir,后面的路径就是之前创建的data和log文件夹得路劲</p><h4 id="启动server"><a href="#启动server" class="headerlink" title="启动server"></a>启动server</h4><p><img src="../imgs/image-20230211110549158.png" alt="image-20230211110549158"></p><p><img src="../imgs/image-20230211110516808.png" alt="image-20230211110516808"></p><h4 id="启动clien"><a href="#启动clien" class="headerlink" title="启动clien"></a>启动clien</h4><p><img src="../imgs/image-20230211110530354.png" alt="image-20230211110530354"></p><h3 id="Redis的安装与启动"><a href="#Redis的安装与启动" class="headerlink" title="Redis的安装与启动"></a>Redis的安装与启动</h3>]]></content>
     
     
     
