@@ -33,8 +33,9 @@
 <meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230109201000618.png">
 <meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230109200858631.png">
 <meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230110171108832.png">
+<meta property="og:image" content="http://example.com/2023/03/12/Mysql/Mysql.assets/20230312231852.png">
 <meta property="article:published_time" content="2023-03-12T14:57:49.000Z">
-<meta property="article:modified_time" content="2023-03-12T15:00:30.947Z">
+<meta property="article:modified_time" content="2023-05-16T12:37:38.395Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Mysql">
 <meta name="twitter:card" content="summary_large_image">
@@ -231,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7k words
+          9.2k words
         
       </span>
     
@@ -242,7 +243,7 @@
         
         
         
-          59 mins
+          77 mins
         
       </span>
     
@@ -571,7 +572,7 @@
 <h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h2><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230110171108832.png" srcset="/img/loading.gif" lazyload alt="image-20230110171108832"></p>
 <h4 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h4><p>相当于查询表A与表B的交集</p>
 <p>语法结构：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs csharp">隐士内内连接<br><span class="hljs-keyword">select</span> 字段列表 <span class="hljs-keyword">from</span> 表<span class="hljs-number">1</span>，表<span class="hljs-number">2</span> <span class="hljs-keyword">where</span> 条件<br>显示内连接<br><span class="hljs-keyword">select</span> 字段列表 <span class="hljs-keyword">from</span> 表<span class="hljs-number">1</span> <span class="hljs-keyword">join</span> 表<span class="hljs-number">2</span> <span class="hljs-keyword">on</span> 条件<br></code></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs csharp">隐士内内连接<br><span class="hljs-keyword">select</span> 字段列表 <span class="hljs-keyword">from</span> 表<span class="hljs-number">1</span>，表<span class="hljs-number">2</span> <span class="hljs-keyword">where</span> 条件<br>显示内连接<br><span class="hljs-keyword">select</span> 字段列表 <span class="hljs-keyword">from</span> 表<span class="hljs-number">1</span> <span class="hljs-keyword">join</span> 表<span class="hljs-number">2</span> <span class="hljs-keyword">on</span> 条件<br><span class="hljs-keyword">select</span> 字段列表 <span class="hljs-keyword">from</span> 表<span class="hljs-number">1</span> <span class="hljs-keyword">join</span> 表<span class="hljs-number">2</span> <span class="hljs-keyword">using</span> (条件<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
 
 <p>案列</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript">select * <span class="hljs-keyword">from</span> emp dept <span class="hljs-keyword">where</span> emp.<span class="hljs-built_in">id</span>=dept.<span class="hljs-built_in">id</span>;<br>select t1.<span class="hljs-built_in">name</span> t1.gender <span class="hljs-keyword">from</span> emp t1,dept t2 <span class="hljs-keyword">where</span> t1.<span class="hljs-built_in">id</span>=t2.<span class="hljs-built_in">id</span><br></code></pre></td></tr></table></figure>
@@ -622,6 +623,61 @@
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-builtin-name">set</span> @@<span class="hljs-attribute">autocommit</span>=0;<br></code></pre></td></tr></table></figure>
 
 <h2 id="底层数据结构"><a href="#底层数据结构" class="headerlink" title="底层数据结构"></a>底层数据结构</h2><p>sql语句执过程中都发生了什么？</p>
+<p>用户端发送请求，然后给连接器验证用户身份，给与权限，然后先查询缓存，缓存中存在就直接返回，不存在就执行后续的操作，然后交给分析器，进行sql语句的词法分析和语法分析，分析结束后，交给优化器去选择最优化的执行方案，最后再交给执行器去执行，执行器交给存储引擎获取数据然后返回。</p>
+<p><img src="Mysql.assets/20230312231852.png" srcset="/img/loading.gif" lazyload></p>
+<p>Mysql的存储引擎？</p>
+<h2 id="sql练习"><a href="#sql练习" class="headerlink" title="sql练习"></a>sql练习</h2><p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/82ebd89f12cf48efba0fecb392e193dd?tpId=199&tqId=1971219&ru=/exam/intelligent&qru=/ta/sql-quick-study/question-ranking&sourceUrl=/exam/intelligent">查询结果去重</a></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-function"><span class="hljs-keyword">select</span>  <span class="hljs-title">distinct</span>(<span class="hljs-params">university</span>) <span class="hljs-keyword">from</span> user_profile</span>;<br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/c7ad0e2df4f647dfa5278e99894a7561?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/intelligent">查询结果限制返回行数_</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/0d8f49aeaf7a4e1cb7fecec980712113?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/intelligent">将查询后的列重新命名</a></p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">select</span> device_id user_infos_example <span class="hljs-keyword">from</span> user_profile <span class="hljs-keyword">limit</span> <span class="hljs-number">0</span>,<span class="hljs-number">2</span>;<br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/be54223075cc43ceb20e4ce8a8e3e340?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/intelligent">查找某个年龄段的用户信息</a></p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">select</span> device_id,gender,age <span class="hljs-keyword">from</span> user_profile <span class="hljs-keyword">where</span> age <span class="hljs-keyword">between</span> <span class="hljs-number">20</span> <span class="hljs-keyword">and</span> <span class="hljs-number">23</span>;<br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/c12a056497404d1ea782308a7b821f9c?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/intelligent">查找除复旦大学的用户信息</a></p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs n1ql">#1 <span class="hljs-keyword">select</span> device_id,gender,age,university <span class="hljs-keyword">from</span> user_profile <span class="hljs-keyword">where</span> university!=<span class="hljs-string">&quot;复旦大学&quot;</span>;<br>#2 <span class="hljs-keyword">select</span> device_id,gender,age,university <span class="hljs-keyword">from</span> user_profile <span class="hljs-keyword">where</span> university <span class="hljs-keyword">not</span> <span class="hljs-keyword">like</span> <span class="hljs-string">&quot;复旦大学&quot;</span>;<br>#2 <span class="hljs-keyword">select</span> device_id,gender,age,university <span class="hljs-keyword">from</span> user_profile <span class="hljs-keyword">where</span> university <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> (<span class="hljs-string">&quot;复旦大学&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/08c9846a423540319eea4be44e339e35?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/intelligent">用where过滤空值练习</a></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql">#<span class="hljs-number">1</span> <span class="hljs-keyword">select</span> device_id,gender,age,university <span class="hljs-keyword">from</span> user_profile <span class="hljs-keyword">where</span> age<span class="hljs-operator">!=</span>&quot;&quot;;<br>#<span class="hljs-number">2</span><span class="hljs-keyword">select</span> device_id,gender,age,university <span class="hljs-keyword">from</span> user_profile <span class="hljs-keyword">where</span> age  <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span>;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/d5ac4c878b63477fa5e5dfcb427d9102?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/company">操作符混合运用</a></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">select</span><br>    <span class="hljs-attribute">device_id</span>,<br>    <span class="hljs-attribute">gender</span>,<br>    <span class="hljs-attribute">age</span>,<br>    <span class="hljs-attribute">university</span>,<br>    <span class="hljs-attribute">gpa</span><br><span class="hljs-attribute">from</span><br>    <span class="hljs-attribute">user_profile</span><br><span class="hljs-attribute">where</span><br>    <span class="hljs-attribute">gpa</span> &gt; <span class="hljs-number">3</span>.<span class="hljs-number">5</span><br>    <span class="hljs-attribute">and</span> university = <span class="hljs-string">&quot;山东大学&quot;</span><br>    <span class="hljs-attribute">or</span> gpa &gt; <span class="hljs-number">3</span>.<span class="hljs-number">8</span><br>    <span class="hljs-attribute">and</span> university = <span class="hljs-string">&quot;复旦大学&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/95d9922b1e2a49de80daa491889969ee?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/company">查看学校名称中含北京的用户_牛客题霸_牛客网 (nowcoder.com)</a></p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs axapta"><span class="hljs-keyword">select</span> device_id,age,university <span class="hljs-keyword">from</span> user_profile <span class="hljs-keyword">where</span> university <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;%北京%&#x27;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/4e22fc5dbd16414fb2c7683557a84a4f?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/company">查找GPA最高值_牛客题霸_牛客网 (nowcoder.com)</a></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> <span class="hljs-built_in">max</span>(gpa) <span class="hljs-keyword">from</span> user_profile <span class="hljs-keyword">where</span> university<span class="hljs-operator">=</span>&quot;复旦大学&quot;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/7d9a7b2d6b4241dbb5e5066d7549ca01?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/company">计算男生人数以及平均GPA_牛客题霸_牛客网 (nowcoder.com)</a></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>) male_num,round(<span class="hljs-built_in">avg</span>(gpa),<span class="hljs-number">1</span>) avg_gpa <span class="hljs-keyword">from</span> user_profile <span class="hljs-keyword">where</span> gender<span class="hljs-operator">=</span><span class="hljs-string">&#x27;male&#x27;</span>;<br># round 保留小数点<br></code></pre></td></tr></table></figure>
+
+
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/009d8067d2df47fea429afe2e7b9de45?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/company">分组计算练习题_牛客题霸_牛客网 (nowcoder.com)</a></p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">select</span><br>    gender,<br>    university,<br>    <span class="hljs-built_in">count</span>(*) <span class="hljs-keyword">as</span> user_num,<br>    <span class="hljs-built_in">round</span>(<span class="hljs-built_in">avg</span>(active_days_within_30),<span class="hljs-number">1</span>) avg_active_day,<br>    <span class="hljs-built_in">round</span>(<span class="hljs-built_in">avg</span>(question_cnt),<span class="hljs-number">1</span>) avg_question_cnt<br>    <span class="hljs-keyword">from</span> user_profile<br>    <span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> gender,university<br><br></code></pre></td></tr></table></figure>
+
+
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/ddbcedcd9600403296038ee44a172f2d?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/intelligent">分组过滤练习题_牛客题霸_牛客网 (nowcoder.com)</a></p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">select</span><br>    university,<br>    <span class="hljs-built_in">round</span>(<span class="hljs-built_in">avg</span>(question_cnt),<span class="hljs-number">3</span>) avg_question_cnt,<br>    <span class="hljs-built_in">round</span>(<span class="hljs-built_in">avg</span>(answer_cnt),<span class="hljs-number">3</span>) avg_answer_cnt<br><span class="hljs-keyword">from</span><br>    user_profile<br><span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span><br>    university<br><span class="hljs-keyword">having</span> <br>     avg_question_cnt&lt;<span class="hljs-number">5</span> <span class="hljs-keyword">or</span><br>     avg_answer_cnt&lt;<span class="hljs-number">20</span><br><br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/e00bbac732cb4b6bbc62a52b930cb15e?tpId=199&tqId=1975672&ru=/exam/intelligent&qru=/ta/sql-quick-study/question-ranking&sourceUrl=/exam/intelligent">分组排序练习题_牛客题霸_牛客网 (nowcoder.com)</a></p>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">select</span><br>    university,<br>    <span class="hljs-built_in">round</span>(<span class="hljs-built_in">avg</span>(question_cnt),<span class="hljs-number">4</span>) avg_question_cnt<br><span class="hljs-keyword">from</span><br>    user_profile<br><span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span><br>    university<br><span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span><br>    avg_question_cnt<br><br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/55f3d94c3f4d47b69833b335867c06c1?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=/exam/intelligent">浙江大学用户题目回答情况_牛客题霸_牛客网 (nowcoder.com)</a></p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs oxygene"><span class="hljs-keyword">select</span><br>    u.device_id,<br>    question_id,<br>    <span class="hljs-keyword">result</span><br><span class="hljs-keyword">from</span><br>    question_practice_detail q,<br>    user_profile u<br><span class="hljs-keyword">where</span><br>    q.device_id = u.device_id<br>    <span class="hljs-keyword">and</span> university = <span class="hljs-string">&#x27;浙江大学&#x27;</span><br><br><span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> question_id<br><br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -691,9 +747,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2099/02/19/Readme/" title="注意">
+                      <a href="/2023/05/18/pagehelper%E5%AE%9E%E7%8E%B0%E5%88%86%E9%A1%B5/" title="pagehelper实现分页">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">注意</span>
+                        <span class="hidden-mobile">pagehelper实现分页</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
