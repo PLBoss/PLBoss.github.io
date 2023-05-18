@@ -16,12 +16,12 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="爬虫介绍*  万物皆可APIAPI:程序之间的接口 编程环境安装requests库的安装： 以管理员权限打开管理员控制台（cmd) 然后输入命令 pip install requests  测试requests库是否安装成功打开python的ide 输入以下命令：     import requets     r &#x3D; requests.get(&quot;http:&#x2F;&#x2F;www.baidu.com&amp;">
+    <meta name="description" content="爬虫介绍用于自动收集网页上数据的一种自动化脚本，数据包括文字，图片，视频  万物皆可APIAPI:程序之间的接口 编程环境安装requests库的安装： 以管理员权限打开管理员控制台（cmd) 然后输入命令 pip install requests  测试requests库是否安装成功打开python的ide 输入以下命令：     import requets     r &#x3D; requests.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python网络爬虫">
 <meta property="og:url" content="http://example.com/2022/02/18/python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/index.html">
 <meta property="og:site_name" content="RawCode">
-<meta property="og:description" content="爬虫介绍*  万物皆可APIAPI:程序之间的接口 编程环境安装requests库的安装： 以管理员权限打开管理员控制台（cmd) 然后输入命令 pip install requests  测试requests库是否安装成功打开python的ide 输入以下命令：     import requets     r &#x3D; requests.get(&quot;http:&#x2F;&#x2F;www.baidu.com&amp;">
+<meta property="og:description" content="爬虫介绍用于自动收集网页上数据的一种自动化脚本，数据包括文字，图片，视频  万物皆可APIAPI:程序之间的接口 编程环境安装requests库的安装： 以管理员权限打开管理员控制台（cmd) 然后输入命令 pip install requests  测试requests库是否安装成功打开python的ide 输入以下命令：     import requets     r &#x3D; requests.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220224220339.png">
 <meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228201941.png">
@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213244.png">
 <meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220321212306.png">
 <meta property="article:published_time" content="2022-02-18T07:26:39.000Z">
-<meta property="article:modified_time" content="2023-02-21T12:26:41.925Z">
+<meta property="article:modified_time" content="2023-05-18T11:52:20.937Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
@@ -295,7 +295,7 @@
             
               <div class="markdown-body">
                 
-                <h3 id="爬虫介绍"><a href="#爬虫介绍" class="headerlink" title="爬虫介绍"></a>爬虫介绍</h3><pre><code class="hljs">*
+                <h3 id="爬虫介绍"><a href="#爬虫介绍" class="headerlink" title="爬虫介绍"></a>爬虫介绍</h3><pre><code class="hljs">用于自动收集网页上数据的一种自动化脚本，数据包括文字，图片，视频
 </code></pre>
 <h3 id="万物皆可API"><a href="#万物皆可API" class="headerlink" title="万物皆可API"></a>万物皆可API</h3><p>API:程序之间的接口</p>
 <h3 id="编程环境安装"><a href="#编程环境安装" class="headerlink" title="编程环境安装"></a>编程环境安装</h3><pre><code class="hljs">requests库的安装：
@@ -350,7 +350,7 @@ except:
 <h3 id="关键字提交"><a href="#关键字提交" class="headerlink" title="关键字提交"></a>关键字提交</h3><pre><code class="hljs">kv=&#123;:&#125;
 r=requsts.get(url,params=kv)
 </code></pre>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="保存文件"><a href="#保存文件" class="headerlink" title="保存文件"></a>保存文件</h2><pre><code class="hljs">with open(path,&#39;wb&#39;) as f
+<h2 id="保存文件"><a href="#保存文件" class="headerlink" title="保存文件"></a>保存文件</h2><pre><code class="hljs">with open(path,&#39;wb&#39;) as f
 f.write(r.content)
 f.cloce
 </code></pre>
@@ -402,7 +402,7 @@ soup.body.parents//用于遍历所有先辈节点
 <pre><code class="hljs">soup.a.previous_sibing//查看a标签的上一个标签
 </code></pre>
 <p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220224220339.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><h2 id="信息标记的三种方式"><a href="#信息标记的三种方式" class="headerlink" title="信息标记的三种方式"></a>信息标记的三种方式</h2><h3 id="xml（与html相似）"><a href="#xml（与html相似）" class="headerlink" title="xml（与html相似）"></a>xml（与html相似）</h3><p>主要用来internet上的信息交互与传递</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="信息标记的三种方式"><a href="#信息标记的三种方式" class="headerlink" title="信息标记的三种方式"></a>信息标记的三种方式</h2><h3 id="xml（与html相似）"><a href="#xml（与html相似）" class="headerlink" title="xml（与html相似）"></a>xml（与html相似）</h3><p>主要用来internet上的信息交互与传递</p>
 <h3 id="jason-键值对-含有双引号）"><a href="#jason-键值对-含有双引号）" class="headerlink" title="jason(键值对,含有双引号）"></a>jason(键值对,含有双引号）</h3><p>主要应用于云端和节点的信息通信<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228201941.png" srcset="/img/loading.gif" lazyload><br>可以在键值对中嵌套键值对</p>
 <h3 id="Yaml-键值对形式，但无双引号）"><a href="#Yaml-键值对形式，但无双引号）" class="headerlink" title="Yaml(键值对形式，但无双引号）"></a>Yaml(键值对形式，但无双引号）</h3><p>各类系统的配置文件<br>利用缩进来表示所属关系<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202037.png" srcset="/img/loading.gif" lazyload><br>利用减号表述所属关系<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202201.png" srcset="/img/loading.gif" lazyload><br>用竖线表示整块数据<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220228202330.png" srcset="/img/loading.gif" lazyload></p>
 <h2 id="信息提取的一般方法"><a href="#信息提取的一般方法" class="headerlink" title="信息提取的一般方法"></a>信息提取的一般方法</h2><h3 id="形式解析与搜索方法"><a href="#形式解析与搜索方法" class="headerlink" title="形式解析与搜索方法"></a>形式解析与搜索方法</h3><h4 id="方法find-all的使用"><a href="#方法find-all的使用" class="headerlink" title="方法find_all的使用"></a>方法find_all的使用</h4><pre><code class="hljs">soup.find_all(&#39;a&#39;)//查找所有的a标签,默认查找所有的子孙
@@ -442,7 +442,7 @@ martch.endpos //获取结束匹配的位置
 <h3 id="re库的贪婪匹配和最小匹配"><a href="#re库的贪婪匹配和最小匹配" class="headerlink" title="re库的贪婪匹配和最小匹配"></a>re库的贪婪匹配和最小匹配</h3><p>re库默认的是贪婪匹配，返回匹配到的最长的字符串<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220310203514.png" srcset="/img/loading.gif" lazyload></p>
 <hr>
 <h2 id="lxml库"><a href="#lxml库" class="headerlink" title="lxml库"></a>lxml库</h2><p>官方文档 <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/lxml/">https://www.w3cschool.cn/lxml/</a></p>
-<h3 id="Scapy爬虫框架-5-2）"><a href="#Scapy爬虫框架-5-2）" class="headerlink" title="Scapy爬虫框架(5+2）"></a>Scapy爬虫框架(5+2）</h3><h4 id="Scrapy的安装"><a href="#Scrapy的安装" class="headerlink" title="Scrapy的安装"></a>Scrapy的安装</h4><pre><code class="hljs">pip install Scrapy
+<h2 id="Scapy爬虫框架-5-2）"><a href="#Scapy爬虫框架-5-2）" class="headerlink" title="Scapy爬虫框架(5+2）"></a>Scapy爬虫框架(5+2）</h2><h4 id="Scrapy的安装"><a href="#Scrapy的安装" class="headerlink" title="Scrapy的安装"></a>Scrapy的安装</h4><pre><code class="hljs">pip install Scrapy
 </code></pre>
 <h4 id="Scrapy的框架"><a href="#Scrapy的框架" class="headerlink" title="Scrapy的框架"></a>Scrapy的框架</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220316195813.png" srcset="/img/loading.gif" lazyload></p>
 <p>Spider</p>
@@ -475,16 +475,16 @@ scrapy crawl spider //运行一个爬虫
 scrapy list // 列出工程中所有的爬虫
 scrapy shell url //启动URL调试命令行
 </code></pre>
-<h4 id="Scrapy基础"><a href="#Scrapy基础" class="headerlink" title="Scrapy基础"></a>Scrapy基础</h4><p>#####第一步：创建scrapy项目</p>
+<h4 id="Scrapy基础"><a href="#Scrapy基础" class="headerlink" title="Scrapy基础"></a>Scrapy基础</h4><p>第一步：创建scrapy项目</p>
 <p>在自己创建存储项目的文件夹内，按住shift然后右键，选择打开powershell 命令台，前面的两个单词是创建项目固定的，最后一个单词是项目名称</p>
 <p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317211436.png" srcset="/img/loading.gif" lazyload><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212010.png" srcset="/img/loading.gif" lazyload></p>
 <pre><code class="hljs">scrapy startproject python123demo
 </code></pre>
-<p>#####第二步：产生demo.py<br>继续在命令台上输入 scrapy genspider python123.io ,前两个单词固定，后面是爬取页面的原始地址，这个可以在创建demo后，修改爬取网页的地址<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212221.png" srcset="/img/loading.gif" lazyload><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212043.png" srcset="/img/loading.gif" lazyload></p>
-<p>#####第三步：修改demo</p>
+<p>第二步：产生demo.py<br>继续在命令台上输入 scrapy genspider python123.io ,前两个单词固定，后面是爬取页面的原始地址，这个可以在创建demo后，修改爬取网页的地址<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212221.png" srcset="/img/loading.gif" lazyload><br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212043.png" srcset="/img/loading.gif" lazyload></p>
+<p>第三步：修改demo</p>
 <p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213550.png" srcset="/img/loading.gif" lazyload></p>
-<p>#####第四步：运行爬虫<br>继续在命令台输入 scrapy crawl demo<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212523.png" srcset="/img/loading.gif" lazyload></p>
-<p>#####结果：<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213244.png" srcset="/img/loading.gif" lazyload></p>
+<p>第四步：运行爬虫<br>继续在命令台输入 scrapy crawl demo<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317212523.png" srcset="/img/loading.gif" lazyload></p>
+<p>结果：<br><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/20220317213244.png" srcset="/img/loading.gif" lazyload></p>
 <h4 id="yield生成器"><a href="#yield生成器" class="headerlink" title="yield生成器"></a>yield生成器</h4><ul>
 <li>生成器是一个不断产生值的函数</li>
 <li>包含yild语句的函数是一个生成器</li>
@@ -496,7 +496,7 @@ scrapy shell url //启动URL调试命令行
 </code></pre>
   结果： 0 1 4 9 16</li>
 </ul>
-<p>#####生成器的优点（相比与普通的列表返回方法）</p>
+<p>生成器的优点（相比与普通的列表返回方法）</p>
 <ul>
 <li>更快的响应速度</li>
 <li>更节省存储空间（每次只需要一个存储空间）</li>
