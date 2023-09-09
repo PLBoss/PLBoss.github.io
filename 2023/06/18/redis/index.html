@@ -16,22 +16,29 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="待写">
+    <meta name="description" content="1.引言 Redis的概述和发展背景 Redis在大数据时代的应用前景  启动  命令行访问 客户端访问 2.数据结构字符串（String）数据类型创建键值都为字符串的对象 1set msg &quot;hello world&quot;  redis中 相连的字符使用冒号连接 1hello_word &#x3D;&gt; hello:msg  底层实现：123456SDS:动态字符串优点：方便获取字符串">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redis">
+<meta property="og:title" content="Redis">
 <meta property="og:url" content="http://example.com/2023/06/18/redis/index.html">
 <meta property="og:site_name" content="RawCode">
-<meta property="og:description" content="待写">
+<meta property="og:description" content="1.引言 Redis的概述和发展背景 Redis在大数据时代的应用前景  启动  命令行访问 客户端访问 2.数据结构字符串（String）数据类型创建键值都为字符串的对象 1set msg &quot;hello world&quot;  redis中 相连的字符使用冒号连接 1hello_word &#x3D;&gt; hello:msg  底层实现：123456SDS:动态字符串优点：方便获取字符串">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3d40f24c8f4946d58ad72e1e296e3381~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230909230850736.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230221114426602.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230328162412380.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230221114437998.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230909231339896.png">
 <meta property="article:published_time" content="2023-06-18T11:47:05.000Z">
-<meta property="article:modified_time" content="2023-06-18T13:30:57.505Z">
+<meta property="article:modified_time" content="2023-09-09T15:35:34.544Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3d40f24c8f4946d58ad72e1e296e3381~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp">
   
   
   
-  <title>redis - RawCode</title>
+  <title>Redis - RawCode</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="redis"></span>
+            <span id="subtitle" data-typed-text="Redis"></span>
           
         </div>
 
@@ -220,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2 words
+          1k words
         
       </span>
     
@@ -231,7 +238,7 @@
         
         
         
-          1 mins
+          9 mins
         
       </span>
     
@@ -269,12 +276,85 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">redis</h1>
+            <h1 style="display: none">Redis</h1>
             
             
               <div class="markdown-body">
                 
-                <p>待写</p>
+                <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3d40f24c8f4946d58ad72e1e296e3381~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp" srcset="/img/loading.gif" lazyload alt="Redis.mindmap.png"></p>
+<h1 id="1-引言"><a href="#1-引言" class="headerlink" title="1.引言"></a>1.引言</h1><ul>
+<li>Redis的概述和发展背景</li>
+<li>Redis在大数据时代的应用前景</li>
+</ul>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230909230850736.png" srcset="/img/loading.gif" lazyload alt="image-20230909230850736"></p>
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230221114426602.png" srcset="/img/loading.gif" lazyload alt="image-20230221114426602"></p>
+<h4 id="命令行访问"><a href="#命令行访问" class="headerlink" title="命令行访问"></a>命令行访问</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230328162412380.png" srcset="/img/loading.gif" lazyload alt="image-20230328162412380"></p>
+<h4 id="客户端访问"><a href="#客户端访问" class="headerlink" title="客户端访问"></a>客户端访问</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230221114437998.png" srcset="/img/loading.gif" lazyload alt="image-20230221114437998"></p>
+<h1 id="2-数据结构"><a href="#2-数据结构" class="headerlink" title="2.数据结构"></a>2.数据结构</h1><h3 id="字符串（String）数据类型"><a href="#字符串（String）数据类型" class="headerlink" title="字符串（String）数据类型"></a>字符串（String）数据类型</h3><p>创建键值都为字符串的对象</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-keyword">set</span> msg <span class="hljs-comment">&quot;hello world&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>redis中 相连的字符使用冒号连接</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">hello_word</span> =&gt; hello:msg<br></code></pre></td></tr></table></figure>
+
+<h4 id="底层实现："><a href="#底层实现：" class="headerlink" title="底层实现："></a>底层实现：</h4><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">SDS:</span>动态字符串<br>优点：<br>方便获取字符串的长度<br>含有空闲区，方便字符串的增加与删除<br>能保存各种二进制文件<br><br></code></pre></td></tr></table></figure>
+
+<h4 id="与C字符串的区别"><a href="#与C字符串的区别" class="headerlink" title="与C字符串的区别"></a>与C字符串的区别</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230909231339896.png" srcset="/img/loading.gif" lazyload alt="image-20230909231339896"></p>
+<h3 id="哈希（Hash）数据类型"><a href="#哈希（Hash）数据类型" class="headerlink" title="哈希（Hash）数据类型"></a>哈希（Hash）数据类型</h3><p>存入一个哈希对象</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">hset test:<span class="hljs-keyword">user</span> <span class="hljs-title">username</span> zhangsang<br>hset test:<span class="hljs-keyword">user</span> <span class="hljs-title">age</span> <span class="hljs-number">13</span><br></code></pre></td></tr></table></figure>
+
+<p>取出一个哈希对象</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">hget test:<span class="hljs-keyword">user</span> <span class="hljs-title">username</span><br>hget test:<span class="hljs-keyword">user</span> <span class="hljs-title">age</span><br></code></pre></td></tr></table></figure>
+
+<p>底层实现</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">zipList或HashTable<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="列表（List）数据类型"><a href="#列表（List）数据类型" class="headerlink" title="列表（List）数据类型"></a>列表（List）数据类型</h3><p>向列表中加入值,键为test:ids,列表中的值为101，102，103</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">lpush</span> test:ids <span class="hljs-number">101</span> <span class="hljs-number">102</span> <span class="hljs-number">103</span><br></code></pre></td></tr></table></figure>
+
+<p>放入后的元素是</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">103 </span><span class="hljs-number">102</span> <span class="hljs-number">101</span><br></code></pre></td></tr></table></figure>
+
+<p>右弹出其中的值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">rpop <span class="hljs-built_in">test</span>:ids<br></code></pre></td></tr></table></figure>
+
+<p>底层实现</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">zipList或则LinkdeList<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="集合（Set）数据类型"><a href="#集合（Set）数据类型" class="headerlink" title="集合（Set）数据类型"></a>集合（Set）数据类型</h3><p>存入元素</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">SADD test:<span class="hljs-keyword">user</span> <span class="hljs-title">100</span><br></code></pre></td></tr></table></figure>
+
+<p>弹出元素</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">spop <span class="hljs-built_in">test</span>:user<br></code></pre></td></tr></table></figure>
+
+<p>查看集合中的元素</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">smembers <span class="hljs-built_in">test</span>:user<br></code></pre></td></tr></table></figure>
+
+<h4 id="底层实现"><a href="#底层实现" class="headerlink" title="底层实现"></a>底层实现</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs">整数集合和字典<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="有序集合（Sorted-Set）数据类型"><a href="#有序集合（Sorted-Set）数据类型" class="headerlink" title="有序集合（Sorted Set）数据类型"></a>有序集合（Sorted Set）数据类型</h3><p>插入</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">zadd</span> test:students <span class="hljs-number">10</span> aaa <span class="hljs-number">20</span> bbb <span class="hljs-number">30</span> ccc<br></code></pre></td></tr></table></figure>
+
+<p>取出分数</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata"><span class="hljs-keyword">score</span> <span class="hljs-keyword">test</span>:students ccc<br></code></pre></td></tr></table></figure>
+
+<p>取出排名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">zrank <span class="hljs-built_in">test</span>:students ccc<br></code></pre></td></tr></table></figure>
+
+<p>底层实现</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">zipList</span> 或则skipList<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="高级数据类型"><a href="#高级数据类型" class="headerlink" title="高级数据类型"></a>高级数据类型</h3><h1 id="3-持久化机制"><a href="#3-持久化机制" class="headerlink" title="3.持久化机制"></a>3.持久化机制</h1><h3 id="RDB快照持久化"><a href="#RDB快照持久化" class="headerlink" title="RDB快照持久化"></a>RDB快照持久化</h3><h3 id="AOF日志持久化"><a href="#AOF日志持久化" class="headerlink" title="AOF日志持久化"></a>AOF日志持久化</h3><h3 id="持久化机制的选择与配置"><a href="#持久化机制的选择与配置" class="headerlink" title="持久化机制的选择与配置"></a>持久化机制的选择与配置</h3><h1 id="过期删除与内存淘汰"><a href="#过期删除与内存淘汰" class="headerlink" title="过期删除与内存淘汰"></a>过期删除与内存淘汰</h1><h3 id="过期删除策略"><a href="#过期删除策略" class="headerlink" title="过期删除策略"></a>过期删除策略</h3><h3 id="内存淘汰策略"><a href="#内存淘汰策略" class="headerlink" title="内存淘汰策略"></a>内存淘汰策略</h3><h1 id="4-缓存应用场景"><a href="#4-缓存应用场景" class="headerlink" title="4.缓存应用场景"></a>4.缓存应用场景</h1><h3 id="缓存穿透、缓存击穿、缓存雪崩的概念及解决方案"><a href="#缓存穿透、缓存击穿、缓存雪崩的概念及解决方案" class="headerlink" title="缓存穿透、缓存击穿、缓存雪崩的概念及解决方案"></a>缓存穿透、缓存击穿、缓存雪崩的概念及解决方案</h3><h3 id="分布式缓存架构与高可用性设计"><a href="#分布式缓存架构与高可用性设计" class="headerlink" title="分布式缓存架构与高可用性设计"></a>分布式缓存架构与高可用性设计</h3><h3 id="缓存更新与失效策略"><a href="#缓存更新与失效策略" class="headerlink" title="缓存更新与失效策略"></a>缓存更新与失效策略</h3><h1 id="5-发布订阅模式"><a href="#5-发布订阅模式" class="headerlink" title="5.发布订阅模式"></a>5.发布订阅模式</h1><h3 id="发布订阅的基本概念和工作原理"><a href="#发布订阅的基本概念和工作原理" class="headerlink" title="发布订阅的基本概念和工作原理"></a>发布订阅的基本概念和工作原理</h3><h3 id="实时消息发布与订阅系统的建设"><a href="#实时消息发布与订阅系统的建设" class="headerlink" title="实时消息发布与订阅系统的建设"></a>实时消息发布与订阅系统的建设</h3><h1 id="6-分布式锁与事务"><a href="#6-分布式锁与事务" class="headerlink" title="6.分布式锁与事务"></a>6.分布式锁与事务</h1><h3 id="Redis实现分布式锁的方法和技巧"><a href="#Redis实现分布式锁的方法和技巧" class="headerlink" title="Redis实现分布式锁的方法和技巧"></a>Redis实现分布式锁的方法和技巧</h3><h3 id="Redis的事务特性与应用实践"><a href="#Redis的事务特性与应用实践" class="headerlink" title="Redis的事务特性与应用实践"></a>Redis的事务特性与应用实践</h3><h1 id="7-性能优化与调优"><a href="#7-性能优化与调优" class="headerlink" title="7.性能优化与调优"></a>7.性能优化与调优</h1><h3 id="Redis的性能瓶颈分析与优化策略"><a href="#Redis的性能瓶颈分析与优化策略" class="headerlink" title="Redis的性能瓶颈分析与优化策略"></a>Redis的性能瓶颈分析与优化策略</h3><h3 id="Redis部署架构与集群配置优化"><a href="#Redis部署架构与集群配置优化" class="headerlink" title="Redis部署架构与集群配置优化"></a>Redis部署架构与集群配置优化</h3><h3 id="常见的性能监控工具和技术"><a href="#常见的性能监控工具和技术" class="headerlink" title="常见的性能监控工具和技术"></a>常见的性能监控工具和技术</h3><h1 id="8-安全与高可用性"><a href="#8-安全与高可用性" class="headerlink" title="8.安全与高可用性"></a>8.安全与高可用性</h1><h3 id="Redis安全配置与漏洞防护"><a href="#Redis安全配置与漏洞防护" class="headerlink" title="Redis安全配置与漏洞防护"></a>Redis安全配置与漏洞防护</h3><h3 id="Redis的高可用性架构与故障恢复机制"><a href="#Redis的高可用性架构与故障恢复机制" class="headerlink" title="Redis的高可用性架构与故障恢复机制"></a>Redis的高可用性架构与故障恢复机制</h3><h3 id="数据备份与灾备方案"><a href="#数据备份与灾备方案" class="headerlink" title="数据备份与灾备方案"></a>数据备份与灾备方案</h3><h1 id="9-结语"><a href="#9-结语" class="headerlink" title="9.结语"></a>9.结语</h1><ul>
+<li>Redis在现代应用开发中的重要性和价值</li>
+<li>对未来Redis发展的展望</li>
+</ul>
 
                 
               </div>
@@ -299,7 +379,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>redis</div>
+      <div>Redis</div>
       <div>http://example.com/2023/06/18/redis/</div>
     </div>
     <div class="license-meta">
