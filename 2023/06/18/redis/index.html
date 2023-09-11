@@ -29,8 +29,9 @@
 <meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230328162412380.png">
 <meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230221114437998.png">
 <meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230909231339896.png">
+<meta property="og:image" content="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230910163101621.png">
 <meta property="article:published_time" content="2023-06-18T11:47:05.000Z">
-<meta property="article:modified_time" content="2023-09-09T15:35:34.544Z">
+<meta property="article:modified_time" content="2023-09-10T13:41:45.055Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Redis">
 <meta name="twitter:card" content="summary_large_image">
@@ -227,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k words
+          5.4k words
         
       </span>
     
@@ -238,7 +239,7 @@
         
         
         
-          9 mins
+          45 mins
         
       </span>
     
@@ -299,6 +300,10 @@
 <h4 id="底层实现："><a href="#底层实现：" class="headerlink" title="底层实现："></a>底层实现：</h4><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">SDS:</span>动态字符串<br>优点：<br>方便获取字符串的长度<br>含有空闲区，方便字符串的增加与删除<br>能保存各种二进制文件<br><br></code></pre></td></tr></table></figure>
 
 <h4 id="与C字符串的区别"><a href="#与C字符串的区别" class="headerlink" title="与C字符串的区别"></a>与C字符串的区别</h4><p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230909231339896.png" srcset="/img/loading.gif" lazyload alt="image-20230909231339896"></p>
+<h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">缓存<span class="hljs-regexp">/计数器/</span>会话管理/分布式锁<br></code></pre></td></tr></table></figure>
+
+
+
 <h3 id="哈希（Hash）数据类型"><a href="#哈希（Hash）数据类型" class="headerlink" title="哈希（Hash）数据类型"></a>哈希（Hash）数据类型</h3><p>存入一个哈希对象</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">hset test:<span class="hljs-keyword">user</span> <span class="hljs-title">username</span> zhangsang<br>hset test:<span class="hljs-keyword">user</span> <span class="hljs-title">age</span> <span class="hljs-number">13</span><br></code></pre></td></tr></table></figure>
 
@@ -307,6 +312,9 @@
 
 <p>底层实现</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">zipList或HashTable<br></code></pre></td></tr></table></figure>
+
+<p>应用场景 ：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">存储对象<br></code></pre></td></tr></table></figure>
 
 
 
@@ -322,6 +330,9 @@
 <p>底层实现</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">zipList或则LinkdeList<br></code></pre></td></tr></table></figure>
 
+<p>应用场景：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">消息队列<span class="hljs-regexp">/时间队列/</span>排行榜<span class="hljs-regexp">/计数器/</span>最近访问记录<br></code></pre></td></tr></table></figure>
+
 
 
 <h3 id="集合（Set）数据类型"><a href="#集合（Set）数据类型" class="headerlink" title="集合（Set）数据类型"></a>集合（Set）数据类型</h3><p>存入元素</p>
@@ -334,6 +345,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">smembers <span class="hljs-built_in">test</span>:user<br></code></pre></td></tr></table></figure>
 
 <h4 id="底层实现"><a href="#底层实现" class="headerlink" title="底层实现"></a>底层实现</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs">整数集合和字典<br><br></code></pre></td></tr></table></figure>
+
+<p>应用场景：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">抽奖<span class="hljs-regexp">/点赞，收藏，标签/</span>共同好友<br></code></pre></td></tr></table></figure>
 
 
 
@@ -349,12 +363,138 @@
 <p>底层实现</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">zipList</span> 或则skipList<br><br></code></pre></td></tr></table></figure>
 
+<p>应用场景</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">热排行榜<span class="hljs-regexp">/最近访问记录/</span>计数器/好友关系<br></code></pre></td></tr></table></figure>
 
 
-<h3 id="高级数据类型"><a href="#高级数据类型" class="headerlink" title="高级数据类型"></a>高级数据类型</h3><h1 id="3-持久化机制"><a href="#3-持久化机制" class="headerlink" title="3.持久化机制"></a>3.持久化机制</h1><h3 id="RDB快照持久化"><a href="#RDB快照持久化" class="headerlink" title="RDB快照持久化"></a>RDB快照持久化</h3><h3 id="AOF日志持久化"><a href="#AOF日志持久化" class="headerlink" title="AOF日志持久化"></a>AOF日志持久化</h3><h3 id="持久化机制的选择与配置"><a href="#持久化机制的选择与配置" class="headerlink" title="持久化机制的选择与配置"></a>持久化机制的选择与配置</h3><h1 id="过期删除与内存淘汰"><a href="#过期删除与内存淘汰" class="headerlink" title="过期删除与内存淘汰"></a>过期删除与内存淘汰</h1><h3 id="过期删除策略"><a href="#过期删除策略" class="headerlink" title="过期删除策略"></a>过期删除策略</h3><h3 id="内存淘汰策略"><a href="#内存淘汰策略" class="headerlink" title="内存淘汰策略"></a>内存淘汰策略</h3><h1 id="4-缓存应用场景"><a href="#4-缓存应用场景" class="headerlink" title="4.缓存应用场景"></a>4.缓存应用场景</h1><h3 id="缓存穿透、缓存击穿、缓存雪崩的概念及解决方案"><a href="#缓存穿透、缓存击穿、缓存雪崩的概念及解决方案" class="headerlink" title="缓存穿透、缓存击穿、缓存雪崩的概念及解决方案"></a>缓存穿透、缓存击穿、缓存雪崩的概念及解决方案</h3><h3 id="分布式缓存架构与高可用性设计"><a href="#分布式缓存架构与高可用性设计" class="headerlink" title="分布式缓存架构与高可用性设计"></a>分布式缓存架构与高可用性设计</h3><h3 id="缓存更新与失效策略"><a href="#缓存更新与失效策略" class="headerlink" title="缓存更新与失效策略"></a>缓存更新与失效策略</h3><h1 id="5-发布订阅模式"><a href="#5-发布订阅模式" class="headerlink" title="5.发布订阅模式"></a>5.发布订阅模式</h1><h3 id="发布订阅的基本概念和工作原理"><a href="#发布订阅的基本概念和工作原理" class="headerlink" title="发布订阅的基本概念和工作原理"></a>发布订阅的基本概念和工作原理</h3><h3 id="实时消息发布与订阅系统的建设"><a href="#实时消息发布与订阅系统的建设" class="headerlink" title="实时消息发布与订阅系统的建设"></a>实时消息发布与订阅系统的建设</h3><h1 id="6-分布式锁与事务"><a href="#6-分布式锁与事务" class="headerlink" title="6.分布式锁与事务"></a>6.分布式锁与事务</h1><h3 id="Redis实现分布式锁的方法和技巧"><a href="#Redis实现分布式锁的方法和技巧" class="headerlink" title="Redis实现分布式锁的方法和技巧"></a>Redis实现分布式锁的方法和技巧</h3><h3 id="Redis的事务特性与应用实践"><a href="#Redis的事务特性与应用实践" class="headerlink" title="Redis的事务特性与应用实践"></a>Redis的事务特性与应用实践</h3><h1 id="7-性能优化与调优"><a href="#7-性能优化与调优" class="headerlink" title="7.性能优化与调优"></a>7.性能优化与调优</h1><h3 id="Redis的性能瓶颈分析与优化策略"><a href="#Redis的性能瓶颈分析与优化策略" class="headerlink" title="Redis的性能瓶颈分析与优化策略"></a>Redis的性能瓶颈分析与优化策略</h3><h3 id="Redis部署架构与集群配置优化"><a href="#Redis部署架构与集群配置优化" class="headerlink" title="Redis部署架构与集群配置优化"></a>Redis部署架构与集群配置优化</h3><h3 id="常见的性能监控工具和技术"><a href="#常见的性能监控工具和技术" class="headerlink" title="常见的性能监控工具和技术"></a>常见的性能监控工具和技术</h3><h1 id="8-安全与高可用性"><a href="#8-安全与高可用性" class="headerlink" title="8.安全与高可用性"></a>8.安全与高可用性</h1><h3 id="Redis安全配置与漏洞防护"><a href="#Redis安全配置与漏洞防护" class="headerlink" title="Redis安全配置与漏洞防护"></a>Redis安全配置与漏洞防护</h3><h3 id="Redis的高可用性架构与故障恢复机制"><a href="#Redis的高可用性架构与故障恢复机制" class="headerlink" title="Redis的高可用性架构与故障恢复机制"></a>Redis的高可用性架构与故障恢复机制</h3><h3 id="数据备份与灾备方案"><a href="#数据备份与灾备方案" class="headerlink" title="数据备份与灾备方案"></a>数据备份与灾备方案</h3><h1 id="9-结语"><a href="#9-结语" class="headerlink" title="9.结语"></a>9.结语</h1><ul>
+
+<h3 id="高级数据类型"><a href="#高级数据类型" class="headerlink" title="高级数据类型"></a>高级数据类型</h3><h4 id="BitMap"><a href="#BitMap" class="headerlink" title="BitMap"></a>BitMap</h4><p>应用场景：用户连续签到功能，DAU（日活跃用户）</p>
+<h4 id="HyperLogLog（估值计算）"><a href="#HyperLogLog（估值计算）" class="headerlink" title="HyperLogLog（估值计算）"></a>HyperLogLog（估值计算）</h4><p>应用场景：用户去重，网站uv（网站独立访客）统计，广告点击统计，数据库查询你优化，分布式计算。</p>
+<h4 id="GEO"><a href="#GEO" class="headerlink" title="GEO"></a>GEO</h4><p>应用场景：记录地理位置。</p>
+<h1 id="3-持久化机制"><a href="#3-持久化机制" class="headerlink" title="3.持久化机制"></a>3.持久化机制</h1><h3 id="RDB快照持久化"><a href="#RDB快照持久化" class="headerlink" title="RDB快照持久化"></a>RDB快照持久化</h3><p>将某一时刻的内存数据，以而二进制的形式写入磁盘</p>
+<p>优点：</p>
+<p>持久化的速度快。</p>
+<p>缺点：</p>
+<p>但是快照的频率不好把握，频率太低 ，丢失的数据就会比较多，频率太高，就会影响性能</p>
+<h3 id="AOF日志持久化"><a href="#AOF日志持久化" class="headerlink" title="AOF日志持久化"></a>AOF日志持久化</h3><p>每执行一条写命令，就把改命令追加的方式写入到一个文件里。</p>
+<p>优点：</p>
+<p>数据丢失较少</p>
+<p>缺点：</p>
+<p>数据恢复不快，AOF文件过大还要进行重写</p>
+<h3 id="混合持节化"><a href="#混合持节化" class="headerlink" title="混合持节化"></a>混合持节化</h3><p>   混合持久化，利用AOF重写日志，然后fork出一个子线程将 数据 以RDB的形式写入AOF文件中，拷贝过程中的操作命令会被写入到重写缓冲区中，等到RDB拷贝结束，就将缓冲区中的命令写入到AOF文件中，然后将新的AOF文件替换掉旧的文件。这样既能使得数据加载的时候，加载的 速度很快，又能保证数据更新更少的丢失。</p>
+<h3 id="持久化机制的选择与配置"><a href="#持久化机制的选择与配置" class="headerlink" title="持久化机制的选择与配置"></a>持久化机制的选择与配置</h3><p>如果数据丢失一点也没什么影响的话，就可以选择使用RDB.</p>
+<p>不建议单独AOF使用，因为恢复数据库的速度过慢，且AOF文件容易过大</p>
+<p>如果对数据的安全性要求高的话，建议同时开启RDB或AOF，或者混合持久化机制。</p>
+<h1 id="过期删除与内存淘汰"><a href="#过期删除与内存淘汰" class="headerlink" title="过期删除与内存淘汰"></a>过期删除与内存淘汰</h1><h3 id="过期删除策略"><a href="#过期删除策略" class="headerlink" title="过期删除策略"></a>过期删除策略</h3><p>定时删除：在设置键的同时，创建于一个定时器，让定时器在键的过期时间来临的时候，立即执行对键的删除</p>
+<p>惰性删除：放任过期键不管，但是每次获取键时间，都检查该键是否过期，如果过期的话，就删除该键，如果没有就返回该键</p>
+<p>定期删除: 每隔一段时间，程序就对数据库进行一次检查，删除里面过期键，至于删除多少键，以及要检查多少数据库，由算法决定 </p>
+<h3 id="内存淘汰策略"><a href="#内存淘汰策略" class="headerlink" title="内存淘汰策略"></a>内存淘汰策略</h3><p><strong>noeviction</strong>：</p>
+<p>不淘汰数据策略：当超过最大内存的时候，不淘汰任何数据，而是 直接抛出错误，不让存入新的数据</p>
+<p><strong>全局淘汰策略</strong></p>
+<p>  allkey-random:随机淘汰任意键</p>
+<p>  allkey-LRU:淘汰最久未使用的键</p>
+<p>  allkey-LFU:淘汰最少使用的键</p>
+<p><strong>过期键淘汰策略</strong></p>
+<p>   volatitle-random:随机淘汰设置了过期时间的键</p>
+<p>   volatitle-ttl:优先淘汰更早过期的键值</p>
+<p>   volatitle-LRU:淘汰设置了过期间中最近未使用的键</p>
+<p>   volatitle-LFU:淘汰最少使用的键。</p>
+<h1 id="4-缓存应用场景"><a href="#4-缓存应用场景" class="headerlink" title="4.缓存应用场景"></a>4.缓存应用场景</h1><h3 id="缓存穿透、缓存击穿、缓存雪崩的概念及解决方案"><a href="#缓存穿透、缓存击穿、缓存雪崩的概念及解决方案" class="headerlink" title="缓存穿透、缓存击穿、缓存雪崩的概念及解决方案"></a>缓存穿透、缓存击穿、缓存雪崩的概念及解决方案</h3><p>缓存 穿透：</p>
+<p>大量无效key进行请求。解决办法：布隆过滤器，在缓存中加入空值，访问控制</p>
+<p>缓存击穿 ：</p>
+<p>热点数据缓存失效。解决办法：设置热点数据永不失效，增加分布式缓存，降级，限流，多级缓存</p>
+<p>缓存雪崩：</p>
+<p>大量缓存同一时间失效。解决办法：设置随机过期时间，设置多级缓存</p>
+<h3 id="分布式缓存架构与高可用性设计"><a href="#分布式缓存架构与高可用性设计" class="headerlink" title="分布式缓存架构与高可用性设计"></a>分布式缓存架构与高可用性设计</h3><h3 id="缓存更新与失效策略"><a href="#缓存更新与失效策略" class="headerlink" title="缓存更新与失效策略"></a>缓存更新与失效策略</h3><h1 id="5-发布订阅模式"><a href="#5-发布订阅模式" class="headerlink" title="5.发布订阅模式"></a>5.发布订阅模式</h1><h3 id="发布订阅的基本概念和工作原理"><a href="#发布订阅的基本概念和工作原理" class="headerlink" title="发布订阅的基本概念和工作原理"></a>发布订阅的基本概念和工作原理</h3><h3 id="实时消息发布与订阅系统的建设"><a href="#实时消息发布与订阅系统的建设" class="headerlink" title="实时消息发布与订阅系统的建设"></a>实时消息发布与订阅系统的建设</h3><h1 id="6-分布式锁与事务"><a href="#6-分布式锁与事务" class="headerlink" title="6.分布式锁与事务"></a>6.分布式锁与事务</h1><h3 id="Redis实现分布式锁的方法和技巧"><a href="#Redis实现分布式锁的方法和技巧" class="headerlink" title="Redis实现分布式锁的方法和技巧"></a>Redis实现分布式锁的方法和技巧</h3><h4 id="如何实现分布式🔒？"><a href="#如何实现分布式🔒？" class="headerlink" title="如何实现分布式🔒？"></a>如何实现分布式🔒？</h4><p>通过Redis的Set中的NX参数进行实现，</p>
+<p>当key不存在的时候，则 显示插入成功，可以用来表示加锁成功</p>
+<p>当key存在的时候，则 显示插入失败，可以用来表示加锁失败</p>
+<p>锁一定要设置过期时间，防止拿到锁发生异常，无法释放锁。还有就是每个客户端的标识要唯一，每个客户端都只有一个唯一的值。</p>
+<h4 id="Redis实现分布式锁的缺点？"><a href="#Redis实现分布式锁的缺点？" class="headerlink" title="Redis实现分布式锁的缺点？"></a>Redis实现分布式锁的缺点？</h4><p>​     在Redis集群的时候，redis主从结点的复制是异步复制的，所以就有可能在主节点获取到锁，然而数据还没有同步到从结点，主节点挂掉了，就会导致多个客户端同时获取同一个锁。</p>
+<h4 id="如何让解决集群下的分布式锁的可靠性？"><a href="#如何让解决集群下的分布式锁的可靠性？" class="headerlink" title="如何让解决集群下的分布式锁的可靠性？"></a>如何让解决集群下的分布式锁的可靠性？</h4><p>​    RedLock:客户端和多个独立的Redis结点依次获取锁，只有在半数以上的结点都能完成加锁，这样才能是加锁成功，否则加锁失败。加锁失败，就将所有结点的加的锁释放掉。</p>
+<h3 id="Redis的事务特性与应用实践"><a href="#Redis的事务特性与应用实践" class="headerlink" title="Redis的事务特性与应用实践"></a>Redis的事务特性与应用实践</h3><p>将多个命令打包，然后一次性的，按顺序的执行的命令机制，在执行事务的期间，不会中断事务去执行其他命令请求，只有在执行完这个事务后，才能去处理其他命令请求</p>
+<p>Redis事务和传统的关系型事务的最大区别在于，redis不支持事务回滚机制，即使事务队列中的某个命令在执行期间出现了错误，整个事务也会继续执行下去，直到事务队列总所有的命令都执行完为止</p>
+<h4 id="特性："><a href="#特性：" class="headerlink" title="特性："></a><strong>特性</strong>：</h4><h5 id="原子性"><a href="#原子性" class="headerlink" title="原子性"></a>原子性</h5><p>数据库中的多个事务当作一个整体来执行，服务器要么执行事务中的所有操作，要么一个操作也不执行</p>
+<h5 id="一致性："><a href="#一致性：" class="headerlink" title="一致性："></a>一致性：</h5><p>事务具有一致性指的是，如果数据库在执行事务之前是一致的，那么在执行事务后，无论事务是否成功，数据库中的数据也是一致</p>
+<p>保证一致性的措施：</p>
+<p>拒绝入队错误：服务器会拒绝执行入队过程中出现错误的事务。</p>
+<p>执行错误：已经执行的命令不会被错误的命令影响</p>
+<p>服务器停机：无论 是无持久化措施下，还是RDB，AOF模式下，事务执行的中途都不会影响数据库的一致性</p>
+<h5 id="隔离性"><a href="#隔离性" class="headerlink" title="隔离性"></a>隔离性</h5><p>​    指的是数据库中有多个事务并发的执行，各个事务之间也不会互相影响，并且在并发的状态下的事务和串化执行的事务参生的结果也是一致的</p>
+<h5 id="耐久性"><a href="#耐久性" class="headerlink" title="耐久性"></a>耐久性</h5><p>服务器运行在AOF持久化模式下，并且appendfsync的选项为aways时事务具有耐久性</p>
+<p>指的是事务执行完毕后，这个事务执行的结果已经被保存到了存储介质里面了，即使服务器在事务执行完毕之后停机，执行事务所得到的结果也不会丢失</p>
+<h4 id="如何实现事务？"><a href="#如何实现事务？" class="headerlink" title="如何实现事务？"></a>如何实现事务？</h4><p>第一步：开始事务（MULTII)</p>
+<p>第二步：将要执行的命令进行入队（事务队列），这个队列是一个先进先出的队列。</p>
+<p>第三步：执行事务(EXEC)</p>
+<h1 id="7-性能优化与调优"><a href="#7-性能优化与调优" class="headerlink" title="7.性能优化与调优"></a>7.性能优化与调优</h1><h3 id="常见的性能监控工具和技术"><a href="#常见的性能监控工具和技术" class="headerlink" title="常见的性能监控工具和技术"></a>常见的性能监控工具和技术</h3><h4 id="延迟基线测量"><a href="#延迟基线测量" class="headerlink" title="延迟基线测量"></a>延迟基线测量</h4><p>可以测试出在一段时间内，redis的最大延迟</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey">redis-cli --latency -h `host` -p `port`<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://plboss-imges.oss-cn-chengdu.aliyuncs.com/master/image-20230910163101621.png" srcset="/img/loading.gif" lazyload alt="image-20230910163101621"></p>
+<p>最大延时为966ms</p>
+<h4 id="慢指令监控"><a href="#慢指令监控" class="headerlink" title="慢指令监控"></a>慢指令监控</h4><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mathematica">看操作的时间复杂度是否为<span class="hljs-built_in">O</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">N</span><span class="hljs-punctuation">)</span><br> 涉及到集合操作的复杂度一般为<span class="hljs-built_in">O</span><span class="hljs-punctuation">(</span><span class="hljs-built_in">N</span><span class="hljs-punctuation">)</span>，比如：集合全量查询<span class="hljs-variable">HGETALL</span>、<span class="hljs-variable">SMEMBERS</span>，以及集合的聚合操作：<span class="hljs-variable">SORT</span>、<span class="hljs-variable">LREM</span>、 <span class="hljs-variable">SUNION</span>等，这些都需要格外留意。<br></code></pre></td></tr></table></figure>
+
+<p>慢指令监控</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-number">1</span>。使用Redis慢日志能查出慢命令<br><span class="hljs-number">2</span>.latency-<span class="hljs-literal">monitor</span>（延迟监控）工具。<br></code></pre></td></tr></table></figure>
+
+<h4 id="慢日志功能"><a href="#慢日志功能" class="headerlink" title="慢日志功能"></a>慢日志功能</h4><p>查询慢日志中6毫秒以上的指令</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">redis-cli<span class="hljs-built_in"> CONFIG </span><span class="hljs-builtin-name">SET</span> slowlog-log-slower-than 6000<br></code></pre></td></tr></table></figure>
+
+<p>查看所有慢指令</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">slowlog <span class="hljs-keyword">get</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="Latency-Monitoring"><a href="#Latency-Monitoring" class="headerlink" title="Latency Monitoring"></a>Latency Monitoring</h4><p>用于以秒为粒度监控各种事件的发生频率。</p>
+<p>开启监视器</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arduino">config set latency-monitor-threshold <span class="hljs-number">9</span> <span class="hljs-comment">//记录超过9ms的时间</span><br></code></pre></td></tr></table></figure>
+
+<p>查看最近的记录</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">latency  latest</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Redis的性能瓶颈分析与优化策略"><a href="#Redis的性能瓶颈分析与优化策略" class="headerlink" title="Redis的性能瓶颈分析与优化策略"></a>Redis的性能瓶颈分析与优化策略</h3><p>网络通信导致的延迟：Redis pipeline 将多个命令连接在一起来减少网络响应往返次数。</p>
+<p>慢指令导致的延迟： 在集群中，将时间复杂度高的放在slave结点上，或者在客户端上完成。使用高效命令进行替代。</p>
+<p> Fork 生成 RDB 导致的延迟： 使用多进程的写时复制技术来实现快照持久化，减少内存占有</p>
+<p>BigKey:对大key 进行拆分，异步清理大key</p>
+<h3 id="Redis部署架构与集群配置优化"><a href="#Redis部署架构与集群配置优化" class="headerlink" title="Redis部署架构与集群配置优化"></a>Redis部署架构与集群配置优化</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h1 id="8-安全与高可用性"><a href="#8-安全与高可用性" class="headerlink" title="8.安全与高可用性"></a>8.安全与高可用性</h1><h4 id="Redis模式"><a href="#Redis模式" class="headerlink" title="Redis模式"></a>Redis模式</h4><h5 id="单机模式"><a href="#单机模式" class="headerlink" title="单机模式"></a>单机模式</h5><p>  就是在单机 上部署Redis服务。优点：部署简单，不需要备用的结点，不需要数据同步。缺点：服务的可靠性差，单机 结点宕机整个服务都不能使用，性能有限，性能取决于单机的cpu处理 性能。</p>
+<h5 id="主从模式"><a href="#主从模式" class="headerlink" title="主从模式"></a>主从模式</h5><p>多个机子上部署的Redis集群，分为主结点和从结点，数据可以从主节点复制到从结点。当主节点挂掉的时候，可以从结点选取一个结点作为主节点，保证服务器正常提供服务。</p>
+<p>优点：可靠性高，一旦 主 结点宕机，从 结点可以作为备份顶上来。可以拓展主结点的读能力，分担主节点的压力。</p>
+<p>缺点：主节点宕机，从结点成为主结点，这时候要修改 应用方的主节点地址，还有让其他从结点复制主节点的内容。</p>
+<p>主结点的性能受到单机的限制。</p>
+<h5 id="哨兵模式"><a href="#哨兵模式" class="headerlink" title="哨兵模式"></a>哨兵模式</h5><p>在主从模式的基础上，新增了自动 化故障恢复，即与应用产生交互，自动修改新的主节点的地址。</p>
+<p>哨兵模式 的结点分为 哨兵结点和数据结点，哨兵结点用于检测节点的状态，哨兵会向每个结点发送ping命令，如果超时没有收到回复，这个结点就会被标记为主观下线，如果一个主服务器被标记为主观下线，那么监视这个主节点的哨兵结点都会向主节点发送一个ping,如果有足够 数量的解答都没有 收到确认，那么这个 结点就会被标记为客观下线。如果是主节点，这时候就要选新的主节点，然后将其他的 从结点的数据向新的主节点复制，</p>
+<p>优点：主动自动切换，健壮性更高。</p>
+<p>缺点：难以在线扩容。</p>
+<h5 id="集群模式"><a href="#集群模式" class="headerlink" title="集群模式"></a>集群模式</h5><p>在主从和 哨兵的基础 上，解决单个结点存储能力，访问能力有限的问题。</p>
+<p>通过 数据分片的方式来进行数据共享问题，将 数据进行分片存储，提高结点的存储能力和访问能力。</p>
+<p>数据分片：</p>
+<p>集群的键空间被分割成16384的哈希槽，然后通过Hash方式将数据分配到不同的分片上 。</p>
+<p>读的时候，就将请求分配给从结点，写的时候就将请求分配给主节点，数据同步是主节点将数据复制到从结点。</p>
+<p>实现读写分离，提高 并发性。</p>
+<h3 id="Redis缓存和数据的一致性问题？"><a href="#Redis缓存和数据的一致性问题？" class="headerlink" title="Redis缓存和数据的一致性问题？"></a>Redis缓存和数据的一致性问题？</h3><p>为了提高命中率和降低错误命中，就需要尽可能保证数据库的数据更新到缓存。</p>
+<p>采取的策略：1.先更新数据库，后后删除缓存/2.先删除缓存，后更新数据库。</p>
+<p>1.潜在问题（常用）</p>
+<p>缓存删除失败，导致读取的就是旧值。还有就是在删除缓存之前，就有线程读取了数据，读取到也可能时旧值，但删除缓存的速度很快，影响不大。</p>
+<p>解决办法：</p>
+<p>一般采用消息队列，将删除的操作存进缓存，一但删除失败,就会重试删除。</p>
+<p>另外一种是采用binlog进行重复删除，更新BinLog中的更新操作，将对应的缓存进行删除。</p>
+<p>2.潜在问题：</p>
+<p>假设线程 A 删除缓存值后，还没有来得及更新数据库（比如说有网络延迟），线程 B 就开始读取数据了，那么这个时候，线程 B 会发现缓存缺失，就只能去数据库读取，然后再将数据写入缓存，将使得其他线程也读取到的是旧值。</p>
+<p>解决办法：</p>
+<p>“延时双删除”：在A更新完数据库后，等到B写入缓存时，就将缓存清掉，然后就不会读取的到的旧的值。</p>
+<h3 id="Redis大key"><a href="#Redis大key" class="headerlink" title="Redis大key"></a>Redis大key</h3><p>大key是指key对应的value值过大（通常认为字符串类型的key对应的value值占用空间大于1M，或者集合类型的k元素数量超过1万个，就算是大key），这样的大key操作起来就会很费时间，容易引发阻塞。</p>
+<h4 id="查找大key"><a href="#查找大key" class="headerlink" title="查找大key?"></a>查找大key?</h4><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">redis-<span class="hljs-keyword">cli</span> -bigkey,Scan,RdbTool,<br></code></pre></td></tr></table></figure>
+
+<h4 id="解决办法？"><a href="#解决办法？" class="headerlink" title="解决办法？"></a>解决办法？</h4><p>拆分成小key,根据时间，空间，位置进行才分，类似于MySql的水平拆分</p>
+<p>数据压缩：采用消耗数据量更少的数据结构进行存储。</p>
+<p>设置合理的过期时间：避免大key累积。</p>
+<p>启用内存淘汰：例如采用LRU,以便在内存不足的时候自动淘汰最近最少使用的数据，防止大key长时间占用内存。</p>
+<p>数据分片：利用集群，分布式存储数据</p>
+<p>释放内存，删除大key:分批次删除大key（del）,异步删除大key（unlink）。</p>
+<h3 id="Redis安全配置与漏洞防护"><a href="#Redis安全配置与漏洞防护" class="headerlink" title="Redis安全配置与漏洞防护"></a>Redis安全配置与漏洞防护</h3><h3 id="Redis的高可用性架构与故障恢复机制"><a href="#Redis的高可用性架构与故障恢复机制" class="headerlink" title="Redis的高可用性架构与故障恢复机制"></a>Redis的高可用性架构与故障恢复机制</h3><h3 id="数据备份与灾备方案"><a href="#数据备份与灾备方案" class="headerlink" title="数据备份与灾备方案"></a>数据备份与灾备方案</h3><h1 id="9-结语"><a href="#9-结语" class="headerlink" title="9.结语"></a>9.结语</h1><ul>
 <li>Redis在现代应用开发中的重要性和价值</li>
 <li>对未来Redis发展的展望</li>
 </ul>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7197062234165461029">一口气讲完了Redis常用的数据结构及应用场景 - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44259720/article/details/127620232">Redis 性能优化，结合经验，分析8种场景下的项目解决方案_redis 高性能场景解决方案_Java Punk的博客-CSDN博客</a></p>
 
                 
               </div>
